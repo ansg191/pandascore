@@ -44,11 +44,11 @@
 //!
 //! ## Examples
 //! To search for a league by name:
-//! ```rust
+//! ```rust,no_run
 #![doc = include_str!("../examples/list_leagues.rs")]
 //! ```
 //! To get a player by ID or name:
-//! ```rust
+//! ```rust,no_run
 #![doc = include_str!("../examples/get_player.rs")]
 //! ```
 
