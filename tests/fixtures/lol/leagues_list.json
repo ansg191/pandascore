@@ -1,0 +1,32 @@
+[
+  {
+    "id": 4864,
+    "image_url": "https://cdn.pandascore.co/images/league/image/4864/asci_2022_logo-png",
+    "modified_at": "2022-09-07T13:38:42Z",
+    "name": "Asia Star Challengers Invitational",
+    "series": [
+      {
+        "begin_at": "2022-09-11T22:00:00Z",
+        "end_at": "2022-09-25T12:33:00Z",
+        "full_name": "2022",
+        "id": 5047,
+        "league_id": 4864,
+        "modified_at": "2022-09-25T14:51:12Z",
+        "name": "",
+        "season": null,
+        "slug": "league-of-legends-asia-star-challengers-invitational-2022",
+        "winner_id": 3457,
+        "winner_type": "Team",
+        "year": 2022
+      }
+    ],
+    "slug": "league-of-legends-asia-star-challengers-invitational",
+    "url": null,
+    "videogame": {
+      "current_version": "12.18.1",
+      "id": 1,
+      "name": "LoL",
+      "slug": "league-of-legends"
+    }
+  }
+]
