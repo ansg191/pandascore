@@ -7,4 +7,5 @@ mod lol {
     mod players;
     mod series;
     mod spells;
+    mod tournaments;
 }

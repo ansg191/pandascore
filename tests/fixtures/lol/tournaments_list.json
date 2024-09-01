@@ -1,0 +1,120 @@
+[
+  {
+    "begin_at": "2023-10-15T03:00:00Z",
+    "detailed_stats": true,
+    "end_at": "2023-10-15T11:00:00Z",
+    "has_bracket": false,
+    "id": 11871,
+    "league": {
+      "id": 297,
+      "image_url": "https://cdn.pandascore.co/images/league/image/297/220px-Worlds_2020.png",
+      "modified_at": "2020-09-15T14:03:55Z",
+      "name": "Worlds",
+      "slug": "league-of-legends-world-championship",
+      "url": null
+    },
+    "league_id": 297,
+    "live_supported": true,
+    "matches": [
+      {
+        "begin_at": "2023-10-15T03:00:00Z",
+        "detailed_stats": true,
+        "draw": false,
+        "end_at": null,
+        "forfeit": false,
+        "game_advantage": null,
+        "id": 840074,
+        "live": {
+          "opens_at": "2023-10-15T02:45:00.000000Z",
+          "supported": true,
+          "url": "wss://live.pandascore.co/matches/840074"
+        },
+        "match_type": "best_of",
+        "modified_at": "2023-09-11T14:12:18Z",
+        "name": "Qualification match 1: TBD vs TBD",
+        "number_of_games": 5,
+        "original_scheduled_at": "2023-10-15T03:00:00Z",
+        "rescheduled": false,
+        "scheduled_at": "2023-10-15T03:00:00Z",
+        "slug": "2023-09-15-3d95b8d1-b1d9-42a4-b00a-6e46504b086b",
+        "status": "not_started",
+        "streams_list": [
+          {
+            "embed_url": "https://player.twitch.tv/?channel=riotgames",
+            "language": "en",
+            "main": true,
+            "official": true,
+            "raw_url": "https://www.twitch.tv/riotgames"
+          }
+        ],
+        "tournament_id": 11871,
+        "winner_id": null,
+        "winner_type": "Team"
+      },
+      {
+        "begin_at": "2023-10-15T08:00:00Z",
+        "detailed_stats": true,
+        "draw": false,
+        "end_at": null,
+        "forfeit": false,
+        "game_advantage": null,
+        "id": 840075,
+        "live": {
+          "opens_at": "2023-10-15T07:45:00.000000Z",
+          "supported": true,
+          "url": "wss://live.pandascore.co/matches/840075"
+        },
+        "match_type": "best_of",
+        "modified_at": "2023-09-20T09:45:08Z",
+        "name": "Qualification match 2: TBD vs TBD",
+        "number_of_games": 5,
+        "original_scheduled_at": "2023-10-15T06:00:00Z",
+        "rescheduled": true,
+        "scheduled_at": "2023-10-15T08:00:00Z",
+        "slug": "2023-09-15-27e7f80e-a548-4698-a0dc-b5319307e27d",
+        "status": "not_started",
+        "streams_list": [
+          {
+            "embed_url": "https://player.twitch.tv/?channel=riotgames",
+            "language": "en",
+            "main": true,
+            "official": true,
+            "raw_url": "https://www.twitch.tv/riotgames"
+          }
+        ],
+        "tournament_id": 11871,
+        "winner_id": null,
+        "winner_type": "Team"
+      }
+    ],
+    "modified_at": "2023-09-13T09:05:17Z",
+    "name": "Play-In Elimination",
+    "prizepool": null,
+    "serie": {
+      "begin_at": "2023-10-09T04:00:00Z",
+      "end_at": "2023-11-19T12:00:00Z",
+      "full_name": "2023",
+      "id": 6560,
+      "league_id": 297,
+      "modified_at": "2023-09-13T09:05:17Z",
+      "name": null,
+      "season": null,
+      "slug": "league-of-legends-world-championship-2023",
+      "winner_id": null,
+      "winner_type": null,
+      "year": 2023
+    },
+    "serie_id": 6560,
+    "slug": "league-of-legends-world-championship-2023-play-in-elimination",
+    "teams": [],
+    "tier": "s",
+    "videogame": {
+      "id": 1,
+      "name": "LoL",
+      "slug": "league-of-legends"
+    },
+    "videogame_title": null,
+    "winner_id": null,
+    "winner_type": "Team"
+  }
+]
