@@ -14,7 +14,7 @@
 //!     - [ ] Tournaments
 //!     - [ ] Video Games
 //! - [ ] "League of Legends" endpoints
-//!     - [ ] Champions
+//!     - [x] Champions
 //!     - [ ] ~Games~
 //!     - [ ] Items
 //!     - [ ] Leagues
