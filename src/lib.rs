@@ -9,7 +9,7 @@
 //!     - [ ] Lives
 //!     - [x] Matches
 //!     - [x] Players
-//!     - [x] Series
+//!     - [ ] Series
 //!     - [x] Teams
 //!     - [ ] Tournaments
 //!     - [ ] Video Games
