@@ -10,6 +10,7 @@ edition = "2021"
 
 [dependencies]
 compact_str = { version = "0.8.0", features = ["serde"] }
+concat-idents = "1.1.5"
 derive_builder = "0.20.1"
 linkify = "0.10.0"
 petgraph = "0.6.5"

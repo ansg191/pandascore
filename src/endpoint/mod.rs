@@ -324,19 +324,31 @@ macro_rules! game_endpoints {
                 ListLeagues(concat!("/", $endpoint, "/leagues")) => $crate::model::league::League
             );
         }
-        // pub mod matches {}
+        pub mod matches {
+            $crate::endpoint::multi_list_endpoint!(
+                ListMatches(concat!("/", $endpoint, "/matches")) => $crate::model::matches::Match
+            );
+        }
         pub mod players {
             $crate::endpoint::list_endpoint!(
                 ListPlayers(concat!("/", $endpoint, "/players")) => $crate::model::player::Player
             );
         }
-        // pub mod series {}
+        pub mod series {
+            $crate::endpoint::multi_list_endpoint!(
+                ListSeries(concat!("/", $endpoint, "/series")) => $crate::model::series::Series
+            );
+        }
         pub mod teams {
             $crate::endpoint::list_endpoint!(
                 ListTeams(concat!("/", $endpoint, "/teams")) => $crate::model::team::Team
             );
         }
-        // pub mod tournaments {}
+        pub mod tournaments {
+            $crate::endpoint::multi_list_endpoint!(
+                ListTournaments(concat!("/", $endpoint, "/tournaments")) => $crate::model::tournament::Tournament
+            );
+        }
     };
 }
 pub(crate) use game_endpoints;
@@ -369,6 +381,52 @@ macro_rules! list_endpoint {
     };
 }
 pub(crate) use list_endpoint;
+
+macro_rules! multi_list_endpoint {
+    ($name:ident($path:expr) => $response:ty) => {
+        #[derive(Debug, Clone, Eq, PartialEq, Default, ::derive_builder::Builder)]
+        #[builder(build_fn(error = "crate::endpoint::BuilderError"))]
+        pub struct $name {
+            #[builder(default)]
+            status: ::std::option::Option<$crate::model::EventStatus>,
+            #[builder(default)]
+            options: $crate::endpoint::CollectionOptions,
+        }
+
+        impl $name {
+            concat_idents::concat_idents!(bname = $name, Builder {
+                pub fn builder() -> bname {
+                    bname::create_empty()
+                }
+            });
+        }
+
+        impl $crate::endpoint::sealed::Sealed for $name {
+            type Response = $crate::endpoint::ListResponse<$response>;
+
+            fn to_request(
+                self,
+            ) -> std::result::Result<::reqwest::Request, $crate::endpoint::EndpointError> {
+                let mut url =
+                    ::url::Url::parse(&format!(concat!("{}", $path, "/"), $crate::endpoint::BASE_URL))?;
+                self.options.add_params(&mut url);
+                if let Some(status) = self.status {
+                    url = url.join(status.as_str())?;
+                }
+                Ok(::reqwest::Request::new(::reqwest::Method::GET, url))
+            }
+
+            fn from_response(
+                response: ::reqwest::Response,
+            ) -> impl ::std::future::Future<
+                Output = ::std::result::Result<Self::Response, $crate::endpoint::EndpointError>,
+            > + Send {
+                $crate::endpoint::ListResponse::from_response(response)
+            }
+        }
+    };
+}
+pub(crate) use multi_list_endpoint;
 
 #[cfg(test)]
 mod tests {
