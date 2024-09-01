@@ -1,5 +1,8 @@
-use pandascore::{endpoint::lol::items::ListItems, Client};
-use pandascore::endpoint::lol::items::GetItem;
+use pandascore::{
+    endpoint::lol::items::{GetItem, ListItems},
+    Client,
+};
+
 use crate::common::{Expectation, MockClient};
 
 #[tokio::test]

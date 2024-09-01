@@ -2,11 +2,11 @@ use std::future::Future;
 
 use reqwest::{Request, Response};
 use url::Url;
+
 use crate::{
-    endpoint::{sealed::Sealed, CollectionOptions, EndpointError, ListResponse},
+    endpoint::{sealed::Sealed, CollectionOptions, EndpointError, ListResponse, BASE_URL},
     model::league::League,
 };
-use crate::endpoint::BASE_URL;
 
 #[derive(Debug, Clone, Eq, PartialEq, Default)]
 pub struct ListLeagues(pub CollectionOptions);
