@@ -1,0 +1,32 @@
+[
+  {
+    "id": 5139,
+    "image_url": null,
+    "modified_at": "2023-09-26T14:15:14Z",
+    "name": "A1 Esport Valorant Cup",
+    "series": [
+      {
+        "begin_at": "2023-10-09T16:00:00Z",
+        "end_at": "2023-10-28T19:00:00Z",
+        "full_name": "Season 4 2023",
+        "id": 6714,
+        "league_id": 5139,
+        "modified_at": "2023-09-26T14:15:14Z",
+        "name": null,
+        "season": "4",
+        "slug": "valorant-a1-esport-league-4-2023",
+        "winner_id": null,
+        "winner_type": null,
+        "year": 2023
+      }
+    ],
+    "slug": "valorant-a1-esport-league",
+    "url": null,
+    "videogame": {
+      "current_version": "7.06",
+      "id": 26,
+      "name": "Valorant",
+      "slug": "valorant"
+    }
+  }
+]

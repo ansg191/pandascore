@@ -1,0 +1,28 @@
+[
+  {
+    "active": true,
+    "current_team": {
+      "acronym": "T1",
+      "id": 126061,
+      "image_url": "https://cdn.pandascore.co/images/team/image/126061/t_oscq04.png",
+      "location": "KR",
+      "modified_at": "2024-08-19T19:17:40Z",
+      "name": "T1",
+      "slug": "t1"
+    },
+    "current_videogame": {
+      "id": 1,
+      "name": "LoL",
+      "slug": "league-of-legends"
+    },
+    "first_name": "Lee",
+    "id": 585,
+    "image_url": "https://cdn.pandascore.co/images/player/image/585/t1_faker_2023_split_2.png",
+    "last_name": "Sang-hyeok",
+    "modified_at": "2024-08-18T12:05:06Z",
+    "name": "Faker",
+    "nationality": "KR",
+    "role": "mid",
+    "slug": "faker"
+  }
+]

@@ -1,0 +1,305 @@
+[
+	{
+		"acronym": "T1",
+		"current_videogame": {
+			"id": 28,
+			"name": "LoL Wild Rift",
+			"slug": "lol-wild-rift"
+		},
+		"id": 130044,
+		"image_url": "https://cdn.pandascore.co/images/team/image/130044/t1_infoboximage.png",
+		"location": "KR",
+		"modified_at": "2022-06-19T13:31:42Z",
+		"name": "T1",
+		"players": [
+			{
+				"active": true,
+				"age": 26,
+				"birthday": "1997-12-11",
+				"first_name": "Park",
+				"id": 38711,
+				"image_url": null,
+				"last_name": "Kyeong-min",
+				"modified_at": "2022-06-19T13:31:42Z",
+				"name": "JJong",
+				"nationality": "KR",
+				"role": null,
+				"slug": "jjong"
+			},
+			{
+				"active": true,
+				"age": 26,
+				"birthday": "1998-02-01",
+				"first_name": "Lee",
+				"id": 38712,
+				"image_url": null,
+				"last_name": "Joon",
+				"modified_at": "2022-06-19T13:31:42Z",
+				"name": "JY",
+				"nationality": "KR",
+				"role": null,
+				"slug": "jy"
+			},
+			{
+				"active": true,
+				"age": 25,
+				"birthday": "1999-03-06",
+				"first_name": "Jeong",
+				"id": 38713,
+				"image_url": null,
+				"last_name": "Yong-hoon",
+				"modified_at": "2022-06-19T13:31:42Z",
+				"name": "Core",
+				"nationality": "KR",
+				"role": null,
+				"slug": "core-jeong-yong-hoon"
+			},
+			{
+				"active": true,
+				"age": 26,
+				"birthday": "1998-03-10",
+				"first_name": "Lee",
+				"id": 38714,
+				"image_url": null,
+				"last_name": "Kyeong-ho",
+				"modified_at": "2022-06-19T13:31:42Z",
+				"name": "PenGuin",
+				"nationality": "KR",
+				"role": null,
+				"slug": "penguin-lee-kyeong-ho"
+			},
+			{
+				"active": true,
+				"age": null,
+				"birthday": null,
+				"first_name": "Kim",
+				"id": 38715,
+				"image_url": null,
+				"last_name": "Dong-young",
+				"modified_at": "2022-06-19T13:31:42Z",
+				"name": "BDG",
+				"nationality": "KR",
+				"role": null,
+				"slug": "bdg"
+			}
+		],
+		"slug": "t1-lol-wild-rift"
+	},
+	{
+		"acronym": "T1",
+		"current_videogame": {
+			"id": 14,
+			"name": "Overwatch",
+			"slug": "ow"
+		},
+		"id": 129810,
+		"image_url": "https://cdn.pandascore.co/images/team/image/129810/600px_t1_2019_allmode.png",
+		"location": "KR",
+		"modified_at": "2022-10-25T20:24:54Z",
+		"name": "T1",
+		"players": [],
+		"slug": "t1-ow"
+	},
+	{
+		"acronym": "T1",
+		"current_videogame": {
+			"id": 24,
+			"name": "Rainbow 6 Siege",
+			"slug": "r6-siege"
+		},
+		"id": 128711,
+		"image_url": "https://cdn.pandascore.co/images/team/image/128711/600px_t1_infoboximage.png",
+		"location": "KR",
+		"modified_at": "2022-04-18T06:04:56Z",
+		"name": "T1",
+		"players": [],
+		"slug": "t1-r6-siege"
+	},
+	{
+		"acronym": "T1",
+		"current_videogame": {
+			"id": 4,
+			"name": "Dota 2",
+			"slug": "dota-2"
+		},
+		"id": 126199,
+		"image_url": "https://cdn.pandascore.co/images/team/image/126199/600px_t1_2019_oct_logo.png",
+		"location": "KR",
+		"modified_at": "2022-11-16T14:10:30Z",
+		"name": "T1",
+		"players": [],
+		"slug": "t1-dota-2"
+	},
+	{
+		"acronym": "T1",
+		"current_videogame": {
+			"id": 1,
+			"name": "LoL",
+			"slug": "league-of-legends"
+		},
+		"id": 126061,
+		"image_url": "https://cdn.pandascore.co/images/team/image/126061/t_oscq04.png",
+		"location": "KR",
+		"modified_at": "2024-08-19T19:17:40Z",
+		"name": "T1",
+		"players": [
+			{
+				"active": true,
+				"age": 28,
+				"birthday": "1996-05-07",
+				"first_name": "Lee",
+				"id": 585,
+				"image_url": "https://cdn.pandascore.co/images/player/image/585/t1_faker_2023_split_2.png",
+				"last_name": "Sang-hyeok",
+				"modified_at": "2024-08-18T12:05:06Z",
+				"name": "Faker",
+				"nationality": "KR",
+				"role": "mid",
+				"slug": "faker"
+			},
+			{
+				"active": true,
+				"age": 21,
+				"birthday": "2002-10-14",
+				"first_name": "Ryu",
+				"id": 8158,
+				"image_url": "https://cdn.pandascore.co/images/player/image/8158/t1_keria_2023_split_2.png",
+				"last_name": "Min-seok",
+				"modified_at": "2024-08-18T12:05:07Z",
+				"name": "Keria",
+				"nationality": "KR",
+				"role": "sup",
+				"slug": "keria"
+			},
+			{
+				"active": true,
+				"age": 22,
+				"birthday": "2002-02-06",
+				"first_name": "Lee",
+				"id": 19285,
+				"image_url": "https://cdn.pandascore.co/images/player/image/19285/t1_gumayusi_2023_split_2.png",
+				"last_name": "Min-hyeon",
+				"modified_at": "2024-08-18T12:05:06Z",
+				"name": "Gumayusi",
+				"nationality": "KR",
+				"role": "adc",
+				"slug": "gumayusi"
+			},
+			{
+				"active": true,
+				"age": 20,
+				"birthday": "2004-01-31",
+				"first_name": "Choi",
+				"id": 31391,
+				"image_url": "https://cdn.pandascore.co/images/player/image/31391/t1_zeus_2023_split_2.png",
+				"last_name": "Woo-je",
+				"modified_at": "2024-08-18T12:05:07Z",
+				"name": "Zeus",
+				"nationality": "KR",
+				"role": "top",
+				"slug": "zeus-choi-woo-je"
+			},
+			{
+				"active": true,
+				"age": 21,
+				"birthday": "2002-12-24",
+				"first_name": "Moon",
+				"id": 31392,
+				"image_url": "https://cdn.pandascore.co/images/player/image/31392/t1_oner_2023_split_2.png",
+				"last_name": "Hyeon-joon",
+				"modified_at": "2024-08-18T12:05:07Z",
+				"name": "Oner",
+				"nationality": "KR",
+				"role": "jun",
+				"slug": "oner"
+			},
+			{
+				"active": true,
+				"age": null,
+				"birthday": null,
+				"first_name": "Hyeon-ho",
+				"id": 51968,
+				"image_url": null,
+				"last_name": "Moon",
+				"modified_at": "2024-08-19T19:17:40Z",
+				"name": "Cloud",
+				"nationality": "KR",
+				"role": "sup",
+				"slug": "cloud-hyeon-ho-moon"
+			}
+		],
+		"slug": "t1"
+	},
+	{
+		"acronym": "T1",
+		"current_videogame": {
+			"id": 20,
+			"name": "PUBG",
+			"slug": "pubg"
+		},
+		"id": 125707,
+		"image_url": "https://cdn.pandascore.co/images/team/image/125707/t_oscq04.png",
+		"location": "KR",
+		"modified_at": "2021-06-29T15:06:02Z",
+		"name": "T1",
+		"players": [
+			{
+				"active": true,
+				"age": 28,
+				"birthday": "1996-04-20",
+				"first_name": "Yoo",
+				"id": 20129,
+				"image_url": "https://cdn.pandascore.co/images/player/image/20129/20_pcs2_aqua5.png",
+				"last_name": "Sang-Ho",
+				"modified_at": "2021-01-04T05:54:32Z",
+				"name": "Aqua5",
+				"nationality": "KR",
+				"role": null,
+				"slug": "aqua5"
+			},
+			{
+				"active": true,
+				"age": 24,
+				"birthday": "2000-05-26",
+				"first_name": "Jung",
+				"id": 20175,
+				"image_url": "https://cdn.pandascore.co/images/player/image/20175/21_pws1_k_ayle.png",
+				"last_name": "Soo-yong",
+				"modified_at": "2021-06-29T15:06:02Z",
+				"name": "kAyle",
+				"nationality": "KR",
+				"role": null,
+				"slug": "kayle-su-yong-jeong"
+			},
+			{
+				"active": true,
+				"age": 29,
+				"birthday": "1995-03-28",
+				"first_name": "Jeong",
+				"id": 20208,
+				"image_url": "https://cdn.pandascore.co/images/player/image/20208/20_pcs2_hulk.png",
+				"last_name": "Lak-kwon",
+				"modified_at": "2021-04-08T11:20:04Z",
+				"name": "Hulk",
+				"nationality": "KR",
+				"role": null,
+				"slug": "hulk"
+			},
+			{
+				"active": true,
+				"age": 29,
+				"birthday": "1994-12-29",
+				"first_name": "Kim",
+				"id": 20210,
+				"image_url": "https://cdn.pandascore.co/images/player/image/20210/20_pcs2_daengchae.png",
+				"last_name": "Do-Hyun",
+				"modified_at": "2021-01-04T05:54:49Z",
+				"name": "Daengchae",
+				"nationality": "KR",
+				"role": null,
+				"slug": "daengchae"
+			}
+		],
+		"slug": "sk-telecom-t1"
+	}
+]

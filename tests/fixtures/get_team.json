@@ -1,0 +1,15 @@
+{
+  "acronym": "VGJ.T",
+  "current_videogame": {
+    "id": 4,
+    "name": "Dota 2",
+    "slug": "dota-2"
+  },
+  "id": 1804,
+  "image_url": "https://cdn.pandascore.co/images/team/image/1804/VGJ.Thunder.png",
+  "location": "CN",
+  "modified_at": "2019-11-24T19:09:24Z",
+  "name": "VGJ.Thunder",
+  "players": [],
+  "slug": "vgj-thunder"
+}

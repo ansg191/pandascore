@@ -1,0 +1,30 @@
+[package]
+name = "pandascore"
+description = "A Rust client for the Pandascore API"
+authors = ["Anshul Gupta <ansg191@anshulg.com>"]
+version = "0.1.0"
+repository = "https://github.com/ansg191/pandascore"
+documentation = "https://docs.rs/pandascore"
+license = "MIT"
+edition = "2021"
+
+[dependencies]
+compact_str = { version = "0.8.0", features = ["serde"] }
+derive_builder = "0.20.1"
+linkify = "0.10.0"
+petgraph = "0.6.5"
+regex = "1.10.6"
+reqwest = { version = "0.12.7", default-features = false }
+serde = { version = "1", features = ["derive"] }
+serde_json = { version = "1" }
+serde_path_to_error = "0.1.16"
+thiserror = "1"
+time = { version = "0.3", features = ["formatting", "parsing", "serde", "macros"] }
+tower = { version = "0.5.0", features = ["util"] }
+url = "2.5"
+
+[dev-dependencies]
+anyhow = "1"
+http = "1"
+reqwest = "0.12.7"
+tokio = { version = "1.39.3", features = ["macros", "rt", "rt-multi-thread"] }
