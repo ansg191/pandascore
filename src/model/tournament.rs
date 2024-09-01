@@ -14,6 +14,7 @@ pub struct Tournament {
     #[serde(flatten)]
     inner: CompactTournament,
 
+    #[serde(default)]
     pub expected_roster: Vec<Roster>,
     pub league: CompactLeague,
     pub matches: Vec<CompactMatch>,

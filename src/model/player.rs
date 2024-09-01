@@ -25,7 +25,7 @@ pub struct CompactPlayer {
     pub age: Option<u8>,
     /// Birthday of the player.
     /// Note: this field is only present for users running the Historical plan or up.
-    #[serde(default, with = "birthday_format::option")]
+    #[serde(with = "birthday_format", default)]
     pub birthday: Option<Date>,
     /// First name of the player.
     pub first_name: Option<CompactString>,
@@ -50,7 +50,26 @@ pub struct CompactPlayer {
     pub slug: Option<CompactString>,
 }
 
-time::serde::format_description!(birthday_format, Date, "[year]-[month]-[day]");
+/// Equivalent to below, but works when `null` is present in the JSON.
+/// ```
+/// time::serde::format_description!(birthday_format, Date, "[year]-[month]-[day]");
+/// ```
+mod birthday_format {
+    use serde::Deserialize;
+    use time::{format_description::BorrowedFormatItem, Date};
+
+    const FORMAT: &[BorrowedFormatItem<'static>] =
+        time::macros::format_description!("[year]-[month]-[day]");
+
+    pub fn deserialize<'de, D>(deserializer: D) -> Result<Option<Date>, D::Error>
+    where
+        D: serde::Deserializer<'de>,
+    {
+        let s: Option<&'de str> = Deserialize::deserialize(deserializer)?;
+        s.map(|s| Date::parse(s, FORMAT).map_err(serde::de::Error::custom))
+            .transpose()
+    }
+}
 
 impl Deref for Player {
     type Target = CompactPlayer;

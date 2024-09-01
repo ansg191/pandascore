@@ -1,0 +1,144 @@
+[
+  {
+    "begin_at": "2023-10-29T10:00:00Z",
+    "detailed_stats": true,
+    "draw": false,
+    "end_at": null,
+    "forfeit": false,
+    "game_advantage": null,
+    "games": [
+      {
+        "begin_at": null,
+        "complete": false,
+        "detailed_stats": true,
+        "end_at": null,
+        "finished": false,
+        "forfeit": false,
+        "id": 250685,
+        "length": null,
+        "match_id": 841976,
+        "position": 1,
+        "status": "not_started",
+        "winner": {
+          "id": null,
+          "type": "Team"
+        },
+        "winner_type": "Team"
+      },
+      {
+        "begin_at": null,
+        "complete": false,
+        "detailed_stats": true,
+        "end_at": null,
+        "finished": false,
+        "forfeit": false,
+        "id": 250686,
+        "length": null,
+        "match_id": 841976,
+        "position": 2,
+        "status": "not_started",
+        "winner": {
+          "id": null,
+          "type": "Team"
+        },
+        "winner_type": "Team"
+      },
+      {
+        "begin_at": null,
+        "complete": false,
+        "detailed_stats": true,
+        "end_at": null,
+        "finished": false,
+        "forfeit": false,
+        "id": 250687,
+        "length": null,
+        "match_id": 841976,
+        "position": 3,
+        "status": "not_started",
+        "winner": {
+          "id": null,
+          "type": "Team"
+        },
+        "winner_type": "Team"
+      }
+    ],
+    "id": 841976,
+    "league": {
+      "id": 297,
+      "image_url": "https://cdn.pandascore.co/images/league/image/297/220px-Worlds_2020.png",
+      "modified_at": "2020-09-15T14:03:55Z",
+      "name": "Worlds",
+      "slug": "league-of-legends-world-championship",
+      "url": null
+    },
+    "league_id": 297,
+    "live": {
+      "opens_at": "2023-10-29T09:45:00.000000Z",
+      "supported": true,
+      "url": "wss://live.pandascore.co/matches/841976"
+    },
+    "match_type": "best_of",
+    "modified_at": "2023-09-14T16:37:12Z",
+    "name": "Round 5: TBD vs TBD",
+    "number_of_games": 3,
+    "opponents": [],
+    "original_scheduled_at": "2023-10-29T10:00:00Z",
+    "rescheduled": false,
+    "results": [],
+    "scheduled_at": "2023-10-29T10:00:00Z",
+    "serie": {
+      "begin_at": "2023-10-09T04:00:00Z",
+      "end_at": "2023-11-19T12:00:00Z",
+      "full_name": "2023",
+      "id": 6560,
+      "league_id": 297,
+      "modified_at": "2023-09-13T09:05:17Z",
+      "name": null,
+      "season": null,
+      "slug": "league-of-legends-world-championship-2023",
+      "winner_id": null,
+      "winner_type": null,
+      "year": 2023
+    },
+    "serie_id": 6560,
+    "slug": "2023-10-29-0569cb91-41f5-4f34-890e-9c8f64fa5c14",
+    "status": "not_started",
+    "streams_list": [
+      {
+        "embed_url": "https://player.twitch.tv/?channel=riotgames",
+        "language": "en",
+        "main": true,
+        "official": true,
+        "raw_url": "https://www.twitch.tv/riotgames"
+      }
+    ],
+    "tournament": {
+      "begin_at": "2023-10-19T05:00:00Z",
+      "detailed_stats": true,
+      "end_at": "2023-11-19T21:00:00Z",
+      "has_bracket": false,
+      "id": 11808,
+      "league_id": 297,
+      "live_supported": true,
+      "modified_at": "2023-09-14T16:39:11Z",
+      "name": "Group Stage",
+      "prizepool": null,
+      "serie_id": 6560,
+      "slug": "league-of-legends-world-championship-2023-group-stage",
+      "tier": "s",
+      "winner_id": null,
+      "winner_type": "Team"
+    },
+    "tournament_id": 11808,
+    "videogame": {
+      "id": 1,
+      "name": "LoL",
+      "slug": "league-of-legends"
+    },
+    "videogame_title": null,
+    "videogame_version": null,
+    "winner": null,
+    "winner_id": null,
+    "winner_type": "Team"
+  }
+]

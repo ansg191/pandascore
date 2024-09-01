@@ -12,24 +12,24 @@ Currently **only** supports the free tier of the API.
   * [ ] Lives
   * [x] Matches
   * [x] Players
-  * [x] Series
+  * [ ] Series
   * [x] Teams
   * [ ] Tournaments
   * [ ] Video Games
 * [ ] “League of Legends” endpoints
-  * [ ] Champions
+  * [x] Champions
   * [ ] ~~Games~~
-  * [ ] Items
-  * [ ] Leagues
+  * [x] Items
+  * [x] Leagues
   * [ ] ~~Mastery~~
   * [ ] ~~Stats~~
-  * [ ] Matches
+  * [x] Matches
   * [ ] ~~Stats~~
-  * [ ] Players
-  * [ ] Series
-  * [ ] Teams
-  * [ ] Spells
-  * [ ] Tournaments
+  * [x] Players
+  * [x] Series
+  * [x] Teams
+  * [x] Spells
+  * [x] Tournaments
 * [ ] “Call of Duty” endpoints
 * [ ] “Counter Strike” endpoints
 * [ ] “Dota 2” endpoints

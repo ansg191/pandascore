@@ -16,17 +16,17 @@
 //! - [ ] "League of Legends" endpoints
 //!     - [x] Champions
 //!     - [ ] ~Games~
-//!     - [ ] Items
-//!     - [ ] Leagues
+//!     - [x] Items
+//!     - [x] Leagues
 //!     - [ ] ~Mastery~
 //!     - [ ] ~Stats~
-//!     - [ ] Matches
+//!     - [x] Matches
 //!     - [ ] ~Stats~
-//!     - [ ] Players
-//!     - [ ] Series
-//!     - [ ] Teams
-//!     - [ ] Spells
-//!     - [ ] Tournaments
+//!     - [x] Players
+//!     - [x] Series
+//!     - [x] Teams
+//!     - [x] Spells
+//!     - [x] Tournaments
 //! - [ ] "Call of Duty" endpoints
 //! - [ ] "Counter Strike" endpoints
 //! - [ ] "Dota 2" endpoints
