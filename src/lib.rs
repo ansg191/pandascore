@@ -16,7 +16,7 @@
 //! - [ ] "League of Legends" endpoints
 //!     - [x] Champions
 //!     - [ ] ~Games~
-//!     - [ ] Items
+//!     - [x] Items
 //!     - [ ] Leagues
 //!     - [ ] ~Mastery~
 //!     - [ ] ~Stats~
