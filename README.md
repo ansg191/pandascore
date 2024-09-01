@@ -20,7 +20,7 @@ Currently **only** supports the free tier of the API.
   * [x] Champions
   * [ ] ~~Games~~
   * [x] Items
-  * [ ] Leagues
+  * [x] Leagues
   * [ ] ~~Mastery~~
   * [ ] ~~Stats~~
   * [ ] Matches

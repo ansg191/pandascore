@@ -17,7 +17,7 @@
 //!     - [x] Champions
 //!     - [ ] ~Games~
 //!     - [x] Items
-//!     - [ ] Leagues
+//!     - [x] Leagues
 //!     - [ ] ~Mastery~
 //!     - [ ] ~Stats~
 //!     - [ ] Matches
