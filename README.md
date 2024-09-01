@@ -23,7 +23,7 @@ Currently **only** supports the free tier of the API.
   * [x] Leagues
   * [ ] ~~Mastery~~
   * [ ] ~~Stats~~
-  * [ ] Matches
+  * [x] Matches
   * [ ] ~~Stats~~
   * [ ] Players
   * [ ] Series

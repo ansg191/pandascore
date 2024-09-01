@@ -20,7 +20,7 @@
 //!     - [x] Leagues
 //!     - [ ] ~Mastery~
 //!     - [ ] ~Stats~
-//!     - [ ] Matches
+//!     - [x] Matches
 //!     - [ ] ~Stats~
 //!     - [ ] Players
 //!     - [ ] Series
