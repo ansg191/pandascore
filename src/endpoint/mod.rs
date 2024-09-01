@@ -317,6 +317,59 @@ where
         .transpose()?)
 }
 
+macro_rules! game_endpoints {
+    ($endpoint:literal) => {
+        pub mod leagues {
+            $crate::endpoint::list_endpoint!(
+                ListLeagues(concat!("/", $endpoint, "/leagues")) => $crate::model::league::League
+            );
+        }
+        // pub mod matches {}
+        pub mod players {
+            $crate::endpoint::list_endpoint!(
+                ListPlayers(concat!("/", $endpoint, "/players")) => $crate::model::player::Player
+            );
+        }
+        // pub mod series {}
+        pub mod teams {
+            $crate::endpoint::list_endpoint!(
+                ListTeams(concat!("/", $endpoint, "/teams")) => $crate::model::team::Team
+            );
+        }
+        // pub mod tournaments {}
+    };
+}
+pub(crate) use game_endpoints;
+
+macro_rules! list_endpoint {
+    ($name:ident($path:expr) => $response:ty) => {
+        #[derive(Debug, Clone, Eq, PartialEq, Default)]
+        pub struct $name(pub $crate::endpoint::CollectionOptions);
+
+        impl $crate::endpoint::sealed::Sealed for $name {
+            type Response = $crate::endpoint::ListResponse<$response>;
+
+            fn to_request(
+                self,
+            ) -> std::result::Result<::reqwest::Request, $crate::endpoint::EndpointError> {
+                let mut url =
+                    ::url::Url::parse(&format!(concat!("{}", $path), $crate::endpoint::BASE_URL))?;
+                self.0.add_params(&mut url);
+                Ok(::reqwest::Request::new(::reqwest::Method::GET, url))
+            }
+
+            fn from_response(
+                response: ::reqwest::Response,
+            ) -> impl ::std::future::Future<
+                Output = ::std::result::Result<Self::Response, $crate::endpoint::EndpointError>,
+            > + Send {
+                $crate::endpoint::ListResponse::from_response(response)
+            }
+        }
+    };
+}
+pub(crate) use list_endpoint;
+
 #[cfg(test)]
 mod tests {
     use url::Url;
