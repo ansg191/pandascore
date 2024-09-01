@@ -1,0 +1,49 @@
+[
+  {
+    "begin_at": "2023-05-31T16:00:00Z",
+    "end_at": null,
+    "full_name": "Summer 2023",
+    "id": 6059,
+    "league": {
+      "id": 4969,
+      "image_url": "https://cdn.pandascore.co/images/league/image/4969/lvp_sl_2nd_el_corte_ingl_253fs_logo-png",
+      "modified_at": "2023-01-27T14:00:33Z",
+      "name": "LVP SL 2nd Division",
+      "slug": "league-of-legends-lvp-sl-2nd-division",
+      "url": null
+    },
+    "league_id": 4969,
+    "modified_at": "2023-06-22T10:48:27Z",
+    "name": null,
+    "season": "Summer",
+    "slug": "league-of-legends-lvp-sl-2nd-division-summer-2023",
+    "tournaments": [
+      {
+        "begin_at": "2023-05-31T16:00:00Z",
+        "detailed_stats": true,
+        "end_at": "2023-07-21T19:50:00Z",
+        "has_bracket": false,
+        "id": 10845,
+        "league_id": 4969,
+        "live_supported": false,
+        "modified_at": "2023-07-23T06:16:50Z",
+        "name": "Regular Season",
+        "prizepool": null,
+        "serie_id": 6059,
+        "slug": "league-of-legends-lvp-sl-2nd-division-summer-2023-regular-season",
+        "tier": "d",
+        "winner_id": null,
+        "winner_type": "Team"
+      }
+    ],
+    "videogame": {
+      "id": 1,
+      "name": "LoL",
+      "slug": "league-of-legends"
+    },
+    "videogame_title": null,
+    "winner_id": null,
+    "winner_type": null,
+    "year": 2023
+  }
+]

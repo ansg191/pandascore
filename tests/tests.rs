@@ -5,4 +5,5 @@ mod lol {
     mod leagues;
     mod matches;
     mod players;
+    mod series;
 }
