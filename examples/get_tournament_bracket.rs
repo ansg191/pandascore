@@ -1,10 +1,6 @@
 use anyhow::Context;
-use pandascore::{
-    endpoint::all::{leagues::GetLeague, tournament::GetTournamentBracket},
-    model::Identifier,
-    Client,
-};
-use petgraph::dot::{Config, Dot};
+use pandascore::{endpoint::all::tournament::GetTournamentBracket, model::Identifier, Client};
+use petgraph::dot::Dot;
 
 #[tokio::main]
 async fn main() -> anyhow::Result<()> {

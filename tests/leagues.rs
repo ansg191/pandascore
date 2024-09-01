@@ -3,7 +3,7 @@ use pandascore::{
         all::leagues::{GetLeague, GetLeagueMatches, ListLeagueSeries, ListLeagues},
         CollectionOptions,
     },
-    model::{EventStatus, Identifier, Winner},
+    model::{EventStatus, Identifier},
     Client,
 };
 
