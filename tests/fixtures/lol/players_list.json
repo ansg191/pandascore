@@ -1,0 +1,30 @@
+[
+  {
+    "active": true,
+    "age": null,
+    "birthday": null,
+    "current_team": {
+      "acronym": "DE",
+      "id": 133844,
+      "image_url": null,
+      "location": "PL",
+      "modified_at": "2023-11-07T09:02:36Z",
+      "name": "Duma Easta",
+      "slug": "duma-easta"
+    },
+    "current_videogame": {
+      "id": 1,
+      "name": "LoL",
+      "slug": "league-of-legends"
+    },
+    "first_name": "Adam",
+    "id": 51237,
+    "image_url": null,
+    "last_name": "Malek",
+    "modified_at": "2023-11-07T09:02:36Z",
+    "name": "Traffy",
+    "nationality": "PL",
+    "role": "sup",
+    "slug": "traffy"
+  }
+]
