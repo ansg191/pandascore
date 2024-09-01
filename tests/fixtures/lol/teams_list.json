@@ -1,0 +1,88 @@
+[
+  {
+    "acronym": "DE",
+    "current_videogame": {
+      "id": 1,
+      "name": "LoL",
+      "slug": "league-of-legends"
+    },
+    "id": 133844,
+    "image_url": null,
+    "location": "PL",
+    "modified_at": "2023-11-07T09:02:36Z",
+    "name": "Duma Easta",
+    "players": [
+      {
+        "active": true,
+        "age": null,
+        "birthday": null,
+        "first_name": "Dominik",
+        "id": 47451,
+        "image_url": null,
+        "last_name": "Krzoska",
+        "modified_at": "2023-11-07T09:00:24Z",
+        "name": "Kokos",
+        "nationality": "PL",
+        "role": "jun",
+        "slug": "kokos"
+      },
+      {
+        "active": true,
+        "age": null,
+        "birthday": null,
+        "first_name": "Jakub",
+        "id": 51234,
+        "image_url": null,
+        "last_name": "Kucharczyk",
+        "modified_at": "2023-11-07T09:02:36Z",
+        "name": "Haster",
+        "nationality": "PL",
+        "role": "top",
+        "slug": "haster"
+      },
+      {
+        "active": true,
+        "age": null,
+        "birthday": null,
+        "first_name": "Rafał",
+        "id": 51235,
+        "image_url": null,
+        "last_name": "Marek",
+        "modified_at": "2023-11-07T09:02:35Z",
+        "name": "Bless",
+        "nationality": "PL",
+        "role": "mid",
+        "slug": "bless-rafal-marek"
+      },
+      {
+        "active": true,
+        "age": null,
+        "birthday": null,
+        "first_name": "Kacper",
+        "id": 51236,
+        "image_url": null,
+        "last_name": "Klech",
+        "modified_at": "2023-11-07T09:02:35Z",
+        "name": "Antonio",
+        "nationality": "PL",
+        "role": "adc",
+        "slug": "antonio"
+      },
+      {
+        "active": true,
+        "age": null,
+        "birthday": null,
+        "first_name": "Adam",
+        "id": 51237,
+        "image_url": null,
+        "last_name": "Malek",
+        "modified_at": "2023-11-07T09:02:36Z",
+        "name": "Traffy",
+        "nationality": "PL",
+        "role": "sup",
+        "slug": "traffy"
+      }
+    ],
+    "slug": "duma-easta"
+  }
+]
