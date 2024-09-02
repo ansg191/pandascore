@@ -9,11 +9,11 @@ use crate::{
 crate::endpoint::multi_list_endpoint!(ListSeries("/series") => Series);
 crate::endpoint::get_endpoint!(GetSeries("/series") => Series);
 
-#[bon::builder]
-#[derive(Debug, Clone, PartialEq, Eq)]
+#[derive(Debug, Clone, PartialEq, Eq, typed_builder::TypedBuilder)]
 pub struct ListSeriesMatches<'a> {
-    #[builder(into)]
+    #[builder(setter(into))]
     id: Identifier<'a>,
+    #[builder(default, setter(strip_option(fallback = status_opt)))]
     status: Option<EventStatus>,
     #[builder(default)]
     options: CollectionOptions,
@@ -36,10 +36,9 @@ impl Sealed for ListSeriesMatches<'_> {
     }
 }
 
-#[bon::builder]
-#[derive(Debug, Clone, PartialEq, Eq)]
+#[derive(Debug, Clone, PartialEq, Eq, typed_builder::TypedBuilder)]
 pub struct ListSeriesTournaments<'a> {
-    #[builder(into)]
+    #[builder(setter(into))]
     id: Identifier<'a>,
     #[builder(default)]
     options: CollectionOptions,

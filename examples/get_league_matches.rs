@@ -23,7 +23,7 @@ async fn main() -> anyhow::Result<()> {
     };
     let get_league_matches = GetLeagueMatches::builder()
         .id(id)
-        .maybe_status(status)
+        .status_opt(status)
         .build();
 
     let client = Client::new(reqwest::Client::new(), token)?;
