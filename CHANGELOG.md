@@ -6,6 +6,17 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [0.2.0](https://github.com/ansg191/pandascore/compare/v0.1.1...v0.2.0) - 2024-09-02
+
+### Added
+- add MSRV of 1.75.0
+
+### Other
+- add MSRV test
+- switch from `LazyLock` to `OnceLock`
+- Merge pull request [#13](https://github.com/ansg191/pandascore/pull/13) from ansg191/typed-builder
+- switch to `typed_builder`
+
 ## [0.1.1](https://github.com/ansg191/pandascore/compare/v0.1.0...v0.1.1) - 2024-09-02
 
 ### Fixed
