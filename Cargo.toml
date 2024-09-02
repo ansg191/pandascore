@@ -30,7 +30,6 @@ reqwest = "0.12.7"
 tokio = { version = "1.39.3", features = ["macros", "rt", "rt-multi-thread"] }
 
 [lints.rust]
-unused_crate_dependencies = "warn"
 
 [lints.clippy]
 pedantic = { level = "warn", priority = -1 }
