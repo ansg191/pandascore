@@ -1,8 +1,5 @@
 //! Endpoints for the `PandaScore` API.
 
-// Due to bon: fix these later
-#![allow(private_bounds, clippy::missing_const_for_fn)]
-
 use std::{
     collections::{HashMap, HashSet},
     ops::{Deref, DerefMut},
@@ -460,9 +457,9 @@ pub(crate) use list_endpoint;
 
 macro_rules! multi_list_endpoint {
     ($name:ident($path:expr) => $response:ty) => {
-        #[::bon::builder]
-        #[derive(Debug, Clone, Eq, PartialEq, Default)]
+        #[derive(Debug, Clone, Eq, PartialEq, Default, typed_builder::TypedBuilder)]
         pub struct $name {
+            #[builder(default, setter(strip_option(fallback = status_opt)))]
             pub status: ::std::option::Option<$crate::model::EventStatus>,
             #[builder(default)]
             pub options: $crate::endpoint::CollectionOptions,
