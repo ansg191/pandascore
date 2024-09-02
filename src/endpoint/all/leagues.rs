@@ -1,4 +1,3 @@
-use derive_builder::Builder;
 use reqwest::{Method, Request, Response};
 use url::Url;
 
@@ -10,21 +9,14 @@ use crate::{
 crate::endpoint::list_endpoint!(ListLeagues("/leagues") => League);
 crate::endpoint::get_endpoint!(GetLeague("/leagues") => League);
 
-#[derive(Debug, Clone, PartialEq, Eq, Builder)]
-#[builder(build_fn(error = "crate::endpoint::BuilderError"))]
+#[bon::builder]
+#[derive(Debug, Clone, PartialEq, Eq)]
 pub struct GetLeagueMatches<'a> {
-    #[builder(setter(into))]
+    #[builder(into)]
     id: Identifier<'a>,
-    #[builder(default)]
     status: Option<EventStatus>,
     #[builder(default)]
     options: CollectionOptions,
-}
-
-impl GetLeagueMatches<'_> {
-    pub fn builder() -> GetLeagueMatchesBuilder<'static> {
-        GetLeagueMatchesBuilder::create_empty()
-    }
 }
 
 impl Sealed for GetLeagueMatches<'_> {
@@ -44,19 +36,13 @@ impl Sealed for GetLeagueMatches<'_> {
     }
 }
 
-#[derive(Debug, Clone, PartialEq, Eq, Builder)]
-#[builder(build_fn(error = "crate::endpoint::BuilderError"))]
+#[bon::builder]
+#[derive(Debug, Clone, PartialEq, Eq)]
 pub struct ListLeagueSeries<'a> {
-    #[builder(setter(into))]
+    #[builder(into)]
     id: Identifier<'a>,
     #[builder(default)]
     options: CollectionOptions,
-}
-
-impl ListLeagueSeries<'_> {
-    pub fn builder() -> ListLeagueSeriesBuilder<'static> {
-        ListLeagueSeriesBuilder::create_empty()
-    }
 }
 
 impl Sealed for ListLeagueSeries<'_> {

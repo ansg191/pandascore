@@ -1,4 +1,3 @@
-use derive_builder::Builder;
 use reqwest::{Request, Response};
 use url::Url;
 
@@ -10,21 +9,14 @@ use crate::{
 crate::endpoint::multi_list_endpoint!(ListSeries("/series") => Series);
 crate::endpoint::get_endpoint!(GetSeries("/series") => Series);
 
-#[derive(Debug, Clone, PartialEq, Eq, Builder)]
-#[builder(build_fn(error = "crate::endpoint::BuilderError"))]
+#[bon::builder]
+#[derive(Debug, Clone, PartialEq, Eq)]
 pub struct ListSeriesMatches<'a> {
-    #[builder(setter(into))]
+    #[builder(into)]
     id: Identifier<'a>,
-    #[builder(default)]
     status: Option<EventStatus>,
     #[builder(default)]
     options: CollectionOptions,
-}
-
-impl ListSeriesMatches<'_> {
-    pub fn builder() -> ListSeriesMatchesBuilder<'static> {
-        ListSeriesMatchesBuilder::create_empty()
-    }
 }
 
 impl Sealed for ListSeriesMatches<'_> {
@@ -44,19 +36,13 @@ impl Sealed for ListSeriesMatches<'_> {
     }
 }
 
-#[derive(Debug, Clone, PartialEq, Eq, Builder)]
-#[builder(build_fn(error = "crate::endpoint::BuilderError"))]
+#[bon::builder]
+#[derive(Debug, Clone, PartialEq, Eq)]
 pub struct ListSeriesTournaments<'a> {
-    #[builder(setter(into))]
+    #[builder(into)]
     id: Identifier<'a>,
     #[builder(default)]
     options: CollectionOptions,
-}
-
-impl ListSeriesTournaments<'_> {
-    pub fn builder() -> ListSeriesTournamentsBuilder<'static> {
-        ListSeriesTournamentsBuilder::create_empty()
-    }
 }
 
 impl Sealed for ListSeriesTournaments<'_> {

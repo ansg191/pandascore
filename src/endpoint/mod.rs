@@ -1,3 +1,6 @@
+// Fix this later
+#![allow(private_bounds)]
+
 use std::{
     collections::{HashMap, HashSet},
     ops::{Deref, DerefMut},
@@ -54,10 +57,6 @@ pub enum EndpointError {
     #[error("Failed to parse integer: {0}")]
     InvalidInt(#[from] std::num::ParseIntError),
 }
-
-#[derive(Debug, thiserror::Error)]
-#[error(transparent)]
-pub struct BuilderError(#[from] pub derive_builder::UninitializedFieldError);
 
 #[derive(Debug, Clone, Eq, PartialEq, Default)]
 pub struct CollectionOptions {
@@ -423,21 +422,12 @@ pub(crate) use list_endpoint;
 
 macro_rules! multi_list_endpoint {
     ($name:ident($path:expr) => $response:ty) => {
-        #[derive(Debug, Clone, Eq, PartialEq, Default, ::derive_builder::Builder)]
-        #[builder(build_fn(error = "crate::endpoint::BuilderError"))]
+        #[::bon::builder]
+        #[derive(Debug, Clone, Eq, PartialEq, Default)]
         pub struct $name {
+            pub status: ::std::option::Option<$crate::model::EventStatus>,
             #[builder(default)]
-            status: ::std::option::Option<$crate::model::EventStatus>,
-            #[builder(default)]
-            options: $crate::endpoint::CollectionOptions,
-        }
-
-        impl $name {
-            concat_idents::concat_idents!(bname = $name, Builder {
-                pub fn builder() -> bname {
-                    bname::create_empty()
-                }
-            });
+            pub options: $crate::endpoint::CollectionOptions,
         }
 
         impl $crate::endpoint::sealed::Sealed for $name {
@@ -446,8 +436,10 @@ macro_rules! multi_list_endpoint {
             fn to_request(
                 self,
             ) -> std::result::Result<::reqwest::Request, $crate::endpoint::EndpointError> {
-                let mut url =
-                    ::url::Url::parse(&format!(concat!("{}", $path, "/"), $crate::endpoint::BASE_URL))?;
+                let mut url = ::url::Url::parse(&format!(
+                    concat!("{}", $path, "/"),
+                    $crate::endpoint::BASE_URL
+                ))?;
                 self.options.add_params(&mut url);
                 if let Some(status) = self.status {
                     url = url.join(status.as_str())?;

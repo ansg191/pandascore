@@ -84,7 +84,7 @@ async fn test_get_league_matches() {
 
     let client = Client::new(client, "").unwrap();
 
-    let get_league_matches = GetLeagueMatches::builder().id(5139).build().unwrap();
+    let get_league_matches = GetLeagueMatches::builder().id(5139).build();
     let response = client.execute(get_league_matches).await.unwrap();
 
     assert_eq!(response.len(), 1);
@@ -104,9 +104,8 @@ async fn test_get_league_upcoming_matches() {
 
     let get_league_matches = GetLeagueMatches::builder()
         .id(5139)
-        .status(Some(EventStatus::Upcoming))
-        .build()
-        .unwrap();
+        .status(EventStatus::Upcoming)
+        .build();
     let response = client.execute(get_league_matches).await.unwrap();
 
     assert_eq!(response.len(), 1);
@@ -124,7 +123,7 @@ async fn test_list_league_series() {
 
     let client = Client::new(client, "").unwrap();
 
-    let list_league_series = ListLeagueSeries::builder().id(5139).build().unwrap();
+    let list_league_series = ListLeagueSeries::builder().id(5139).build();
     let response = client.execute(list_league_series).await.unwrap();
 
     assert_eq!(response.len(), 1);

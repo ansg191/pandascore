@@ -10,7 +10,7 @@ async fn main() -> anyhow::Result<()> {
         Ok(id) => Identifier::Id(id),
         Err(_) => Identifier::Slug(&arg),
     };
-    let get_league_series = ListLeagueSeries::builder().id(id).build()?;
+    let get_league_series = ListLeagueSeries::builder().id(id).build();
 
     let client = Client::new(reqwest::Client::new(), token)?;
     let response = client.execute(get_league_series).await?;
