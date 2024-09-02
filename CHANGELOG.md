@@ -6,6 +6,16 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [0.1.1](https://github.com/ansg191/pandascore/compare/v0.1.0...v0.1.1) - 2024-09-02
+
+### Fixed
+- *(clippy)* make clippy stricter
+
+### Other
+- add various documentation
+- remove `unused_crate_dependencies` lint
+- release
+
 ## [0.1.0](https://github.com/ansg191/pandascore/releases/tag/v0.1.0) - 2024-09-02
 
 ### Added
