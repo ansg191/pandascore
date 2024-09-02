@@ -1,0 +1,41 @@
+[
+  {
+    "last_match": {
+      "begin_at": "2018-09-12T08:42:55Z",
+      "detailed_stats": true,
+      "draw": false,
+      "end_at": "2018-09-12T13:07:55Z",
+      "forfeit": false,
+      "game_advantage": null,
+      "id": 53995,
+      "live": {
+        "opens_at": "2018-09-12T08:27:55Z",
+        "supported": true,
+        "url": "wss://live.pandascore.co/matches/53995"
+      },
+      "match_type": "best_of",
+      "modified_at": "2020-11-05T06:49:45Z",
+      "name": "RW vs JDG",
+      "number_of_games": 5,
+      "original_scheduled_at": "2018-09-12T08:42:55Z",
+      "rescheduled": false,
+      "scheduled_at": "2018-09-12T08:00:00Z",
+      "slug": "rogue-warriors-vs-jd-gaming-2018-09-12",
+      "status": "finished",
+      "streams_list": [],
+      "tournament_id": 1590,
+      "winner_id": null,
+      "winner_type": "Team"
+    },
+    "rank": 1,
+    "team": {
+      "acronym": "JDG",
+      "id": 318,
+      "image_url": "https://cdn.pandascore.co/images/team/image/318/qg-reapers.png",
+      "location": "CN",
+      "modified_at": "2022-09-29T06:15:03Z",
+      "name": "JD Gaming",
+      "slug": "qg-reapers"
+    }
+  }
+]

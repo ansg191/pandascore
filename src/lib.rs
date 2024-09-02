@@ -11,7 +11,7 @@
 //!     - [x] Players
 //!     - [x] Series
 //!     - [x] Teams
-//!     - [ ] Tournaments
+//!     - [x] Tournaments
 //!     - [ ] Video Games
 //! - [ ] "League of Legends" endpoints
 //!     - [x] Champions

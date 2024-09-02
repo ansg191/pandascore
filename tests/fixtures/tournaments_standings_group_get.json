@@ -1,0 +1,17 @@
+[
+  {
+    "losses": 5,
+    "rank": 1,
+    "team": {
+      "acronym": "FNC",
+      "id": 394,
+      "image_url": "https://cdn.pandascore.co/images/team/image/394/220px_fnaticlogo_square.png",
+      "location": "GB",
+      "modified_at": "2022-09-29T22:36:18Z",
+      "name": "Fnatic",
+      "slug": "fnatic"
+    },
+    "total": 18,
+    "wins": 13
+  }
+]
