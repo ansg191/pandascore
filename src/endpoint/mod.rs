@@ -353,6 +353,44 @@ macro_rules! game_endpoints {
 }
 pub(crate) use game_endpoints;
 
+macro_rules! get_endpoint {
+    ($name:ident($path:expr) => $response:ty) => {
+        #[derive(Debug, Clone, Eq, PartialEq)]
+        pub struct $name<'a>(pub $crate::model::Identifier<'a>);
+
+        impl<'a> $crate::endpoint::sealed::Sealed for $name<'a> {
+            type Response = $response;
+
+            fn to_request(
+                self,
+            ) -> std::result::Result<::reqwest::Request, $crate::endpoint::EndpointError> {
+                let url = ::url::Url::parse(&format!(
+                    concat!("{}", $path, "/{}"),
+                    $crate::endpoint::BASE_URL,
+                    self.0
+                ))?;
+                Ok(::reqwest::Request::new(::reqwest::Method::GET, url))
+            }
+
+            async fn from_response(
+                response: ::reqwest::Response,
+            ) -> ::std::result::Result<Self::Response, $crate::endpoint::EndpointError> {
+                $crate::endpoint::deserialize(response.error_for_status()?).await
+            }
+        }
+
+        impl<'a, T> ::std::convert::From<T> for $name<'a>
+        where
+            T: Into<$crate::model::Identifier<'a>>,
+        {
+            fn from(id: T) -> Self {
+                Self(id.into())
+            }
+        }
+    };
+}
+pub(crate) use get_endpoint;
+
 macro_rules! list_endpoint {
     ($name:ident($path:expr) => $response:ty) => {
         #[derive(Debug, Clone, Eq, PartialEq, Default)]
