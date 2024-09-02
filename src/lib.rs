@@ -36,7 +36,7 @@
 //! - [ ] "OverWatch" endpoints
 //! - [ ] "PUBG" endpoints
 //! - [ ] "Rainbow Six Siege" endpoints
-//! - [ ] "Rocket League" endpoints
+//! - [x] "Rocket League" endpoints
 //! - [ ] "Valorant" endpoints
 //! - [ ] "King of Glory" endpoints
 //! - [ ] "StarCraft 2" endpoints

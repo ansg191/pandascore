@@ -1,0 +1,32 @@
+[
+  {
+    "id": 4871,
+    "image_url": "https://cdn.pandascore.co/images/league/image/4871/rle-gg_roster_royale_allmode-png",
+    "modified_at": "2022-09-21T08:43:29Z",
+    "name": "rle.gg Roster Royale",
+    "series": [
+      {
+        "begin_at": "2022-09-21T21:00:00Z",
+        "end_at": "2022-09-23T05:00:00Z",
+        "full_name": "2022",
+        "id": 5099,
+        "league_id": 4871,
+        "modified_at": "2022-09-21T08:52:53Z",
+        "name": null,
+        "season": null,
+        "slug": "rl-rle-gg-roster-royale-2022",
+        "winner_id": null,
+        "winner_type": null,
+        "year": 2022
+      }
+    ],
+    "slug": "rl-rle-gg-roster-royale",
+    "url": "https://rle.gg/",
+    "videogame": {
+      "current_version": null,
+      "id": 22,
+      "name": "Rocket League",
+      "slug": "rl"
+    }
+  }
+]

@@ -12,6 +12,7 @@ use serde::de::DeserializeOwned;
 
 pub mod all;
 pub mod lol;
+pub mod rl;
 
 const BASE_URL: &str = "https://api.pandascore.co";
 

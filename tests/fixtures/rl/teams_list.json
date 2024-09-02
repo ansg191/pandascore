@@ -1,0 +1,17 @@
+[
+  {
+    "acronym": "TP",
+    "current_videogame": {
+      "id": 22,
+      "name": "Rocket League",
+      "slug": "rl"
+    },
+    "id": 133806,
+    "image_url": null,
+    "location": "",
+    "modified_at": "2023-10-26T23:05:15Z",
+    "name": "Top Cougars",
+    "players": [],
+    "slug": "top-cougars"
+  }
+]

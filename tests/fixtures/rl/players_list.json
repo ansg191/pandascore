@@ -1,0 +1,30 @@
+[
+  {
+    "active": true,
+    "age": 16,
+    "birthday": "2007-10-06",
+    "current_team": {
+      "acronym": "BDS",
+      "id": 127413,
+      "image_url": "https://cdn.pandascore.co/images/team/image/127413/team_bd_slogo_square.png",
+      "location": "CH",
+      "modified_at": "2023-10-31T07:28:43Z",
+      "name": "Team BDS",
+      "slug": "team-bds"
+    },
+    "current_videogame": {
+      "id": 22,
+      "name": "Rocket League",
+      "slug": "rl"
+    },
+    "first_name": null,
+    "id": 51077,
+    "image_url": null,
+    "last_name": null,
+    "modified_at": "2023-10-31T07:28:43Z",
+    "name": "dralii",
+    "nationality": "MA",
+    "role": null,
+    "slug": "dralii"
+  }
+]

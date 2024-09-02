@@ -1,0 +1,515 @@
+[
+  {
+    "begin_at": "2023-08-26T17:00:00Z",
+    "detailed_stats": true,
+    "end_at": "2023-08-27T20:25:00Z",
+    "has_bracket": true,
+    "id": 11677,
+    "league": {
+      "id": 4823,
+      "image_url": null,
+      "modified_at": "2022-07-15T08:43:35Z",
+      "name": "Gamers8",
+      "slug": "rl-gamers8",
+      "url": null
+    },
+    "league_id": 4823,
+    "live_supported": false,
+    "matches": [
+      {
+        "begin_at": "2023-08-26T17:00:57Z",
+        "detailed_stats": true,
+        "draw": false,
+        "end_at": "2023-08-26T18:02:11Z",
+        "forfeit": false,
+        "game_advantage": null,
+        "id": 829107,
+        "live": {
+          "opens_at": null,
+          "supported": false,
+          "url": null
+        },
+        "match_type": "best_of",
+        "modified_at": "2023-08-26T18:06:45Z",
+        "name": "Quarterfinal 1: OXG vs V1",
+        "number_of_games": 7,
+        "original_scheduled_at": "2023-08-26T17:00:00Z",
+        "rescheduled": false,
+        "scheduled_at": "2023-08-26T17:00:00Z",
+        "slug": "2023-08-26-4280546b-8788-483d-8781-81799220c8f3",
+        "status": "finished",
+        "streams_list": [
+          {
+            "embed_url": "https://player.twitch.tv/?channel=gamers8gg_de",
+            "language": "de",
+            "main": false,
+            "official": false,
+            "raw_url": "https://www.twitch.tv/gamers8gg_de"
+          },
+          {
+            "embed_url": "https://player.twitch.tv/?channel=gamers8gg_jp",
+            "language": "ja",
+            "main": false,
+            "official": false,
+            "raw_url": "https://www.twitch.tv/gamers8gg_jp"
+          },
+          {
+            "embed_url": "https://player.twitch.tv/?channel=rocketbaguette",
+            "language": "fr",
+            "main": false,
+            "official": false,
+            "raw_url": "https://www.twitch.tv/rocketbaguette"
+          },
+          {
+            "embed_url": "https://player.twitch.tv/?channel=gamers8gg",
+            "language": "en",
+            "main": true,
+            "official": true,
+            "raw_url": "https://www.twitch.tv/gamers8gg"
+          }
+        ],
+        "tournament_id": 11677,
+        "winner_id": 127697,
+        "winner_type": "Team"
+      },
+      {
+        "begin_at": "2023-08-26T18:41:42Z",
+        "detailed_stats": true,
+        "draw": false,
+        "end_at": "2023-08-26T19:21:46Z",
+        "forfeit": false,
+        "game_advantage": null,
+        "id": 829110,
+        "live": {
+          "opens_at": null,
+          "supported": false,
+          "url": null
+        },
+        "match_type": "best_of",
+        "modified_at": "2023-08-26T19:23:29Z",
+        "name": "Quarterfinal 2: FLCN vs GENG",
+        "number_of_games": 7,
+        "original_scheduled_at": "2023-08-26T18:00:00Z",
+        "rescheduled": false,
+        "scheduled_at": "2023-08-26T18:00:00Z",
+        "slug": "team-falcons-2023-08-26",
+        "status": "finished",
+        "streams_list": [
+          {
+            "embed_url": "https://player.twitch.tv/?channel=gamers8gg_de",
+            "language": "de",
+            "main": false,
+            "official": false,
+            "raw_url": "https://www.twitch.tv/gamers8gg_de"
+          },
+          {
+            "embed_url": "https://player.twitch.tv/?channel=gamers8gg_jp",
+            "language": "ja",
+            "main": false,
+            "official": false,
+            "raw_url": "https://www.twitch.tv/gamers8gg_jp"
+          },
+          {
+            "embed_url": "https://player.twitch.tv/?channel=rocketbaguette",
+            "language": "fr",
+            "main": false,
+            "official": false,
+            "raw_url": "https://www.twitch.tv/rocketbaguette"
+          },
+          {
+            "embed_url": "https://player.twitch.tv/?channel=gamers8gg",
+            "language": "en",
+            "main": true,
+            "official": true,
+            "raw_url": "https://www.twitch.tv/gamers8gg"
+          }
+        ],
+        "tournament_id": 11677,
+        "winner_id": 131231,
+        "winner_type": "Team"
+      },
+      {
+        "begin_at": "2023-08-26T19:49:08Z",
+        "detailed_stats": true,
+        "draw": false,
+        "end_at": "2023-08-26T20:33:24Z",
+        "forfeit": false,
+        "game_advantage": null,
+        "id": 829113,
+        "live": {
+          "opens_at": null,
+          "supported": false,
+          "url": null
+        },
+        "match_type": "best_of",
+        "modified_at": "2023-08-26T20:37:00Z",
+        "name": "Quarterfinal 3: BDS vs FURIA",
+        "number_of_games": 7,
+        "original_scheduled_at": "2023-08-26T19:00:00Z",
+        "rescheduled": false,
+        "scheduled_at": "2023-08-26T19:00:00Z",
+        "slug": "2023-08-26-70574c32-7100-49ad-8aa6-c2285f617b5a",
+        "status": "finished",
+        "streams_list": [
+          {
+            "embed_url": "https://player.twitch.tv/?channel=gamers8gg_de",
+            "language": "de",
+            "main": false,
+            "official": false,
+            "raw_url": "https://www.twitch.tv/gamers8gg_de"
+          },
+          {
+            "embed_url": "https://player.twitch.tv/?channel=gamers8gg_jp",
+            "language": "ja",
+            "main": false,
+            "official": false,
+            "raw_url": "https://www.twitch.tv/gamers8gg_jp"
+          },
+          {
+            "embed_url": "https://player.twitch.tv/?channel=rocketbaguette",
+            "language": "fr",
+            "main": false,
+            "official": false,
+            "raw_url": "https://www.twitch.tv/rocketbaguette"
+          },
+          {
+            "embed_url": "https://player.twitch.tv/?channel=gamers8gg",
+            "language": "en",
+            "main": true,
+            "official": true,
+            "raw_url": "https://www.twitch.tv/gamers8gg"
+          }
+        ],
+        "tournament_id": 11677,
+        "winner_id": 127413,
+        "winner_type": "Team"
+      },
+      {
+        "begin_at": "2023-08-26T20:58:29Z",
+        "detailed_stats": true,
+        "draw": false,
+        "end_at": "2023-08-26T21:39:51Z",
+        "forfeit": false,
+        "game_advantage": null,
+        "id": 829114,
+        "live": {
+          "opens_at": null,
+          "supported": false,
+          "url": null
+        },
+        "match_type": "best_of",
+        "modified_at": "2023-08-26T21:44:57Z",
+        "name": "Quarterfinal 4: Rule One vs VIT",
+        "number_of_games": 7,
+        "original_scheduled_at": "2023-08-26T20:00:00Z",
+        "rescheduled": false,
+        "scheduled_at": "2023-08-26T20:00:00Z",
+        "slug": "2023-08-26-8fe02db0-7892-460a-af83-503babd4e054",
+        "status": "finished",
+        "streams_list": [
+          {
+            "embed_url": "https://player.twitch.tv/?channel=gamers8gg_de",
+            "language": "de",
+            "main": false,
+            "official": false,
+            "raw_url": "https://www.twitch.tv/gamers8gg_de"
+          },
+          {
+            "embed_url": "https://player.twitch.tv/?channel=gamers8gg_jp",
+            "language": "ja",
+            "main": false,
+            "official": false,
+            "raw_url": "https://www.twitch.tv/gamers8gg_jp"
+          },
+          {
+            "embed_url": "https://player.twitch.tv/?channel=rocketbaguette",
+            "language": "fr",
+            "main": false,
+            "official": false,
+            "raw_url": "https://www.twitch.tv/rocketbaguette"
+          },
+          {
+            "embed_url": "https://player.twitch.tv/?channel=gamers8gg",
+            "language": "en",
+            "main": true,
+            "official": true,
+            "raw_url": "https://www.twitch.tv/gamers8gg"
+          }
+        ],
+        "tournament_id": 11677,
+        "winner_id": 131998,
+        "winner_type": "Team"
+      },
+      {
+        "begin_at": "2023-08-27T17:02:45Z",
+        "detailed_stats": true,
+        "draw": false,
+        "end_at": "2023-08-27T17:55:38Z",
+        "forfeit": false,
+        "game_advantage": null,
+        "id": 829115,
+        "live": {
+          "opens_at": null,
+          "supported": false,
+          "url": null
+        },
+        "match_type": "best_of",
+        "modified_at": "2023-08-27T17:56:05Z",
+        "name": "Semifinal 1: V1 vs FLCN",
+        "number_of_games": 7,
+        "original_scheduled_at": "2023-08-27T17:00:00Z",
+        "rescheduled": false,
+        "scheduled_at": "2023-08-27T17:00:00Z",
+        "slug": "version1-2023-08-27",
+        "status": "finished",
+        "streams_list": [
+          {
+            "embed_url": "https://player.twitch.tv/?channel=gamers8gg_de",
+            "language": "de",
+            "main": false,
+            "official": false,
+            "raw_url": "https://www.twitch.tv/gamers8gg_de"
+          },
+          {
+            "embed_url": "https://player.twitch.tv/?channel=gamers8gg_jp",
+            "language": "ja",
+            "main": false,
+            "official": false,
+            "raw_url": "https://www.twitch.tv/gamers8gg_jp"
+          },
+          {
+            "embed_url": "https://player.twitch.tv/?channel=rocketbaguette",
+            "language": "fr",
+            "main": false,
+            "official": false,
+            "raw_url": "https://www.twitch.tv/rocketbaguette"
+          },
+          {
+            "embed_url": "https://player.twitch.tv/?channel=gamers8gg",
+            "language": "en",
+            "main": true,
+            "official": true,
+            "raw_url": "https://www.twitch.tv/gamers8gg"
+          }
+        ],
+        "tournament_id": 11677,
+        "winner_id": 127697,
+        "winner_type": "Team"
+      },
+      {
+        "begin_at": "2023-08-27T18:32:34Z",
+        "detailed_stats": true,
+        "draw": false,
+        "end_at": "2023-08-27T19:12:05Z",
+        "forfeit": false,
+        "game_advantage": null,
+        "id": 829116,
+        "live": {
+          "opens_at": null,
+          "supported": false,
+          "url": null
+        },
+        "match_type": "best_of",
+        "modified_at": "2023-08-27T19:12:18Z",
+        "name": "Semifinal 2: BDS vs Rule One",
+        "number_of_games": 7,
+        "original_scheduled_at": "2023-08-27T18:00:00Z",
+        "rescheduled": false,
+        "scheduled_at": "2023-08-27T18:00:00Z",
+        "slug": "team-bds-2023-08-27",
+        "status": "finished",
+        "streams_list": [
+          {
+            "embed_url": "https://player.twitch.tv/?channel=gamers8gg_de",
+            "language": "de",
+            "main": false,
+            "official": false,
+            "raw_url": "https://www.twitch.tv/gamers8gg_de"
+          },
+          {
+            "embed_url": "https://player.twitch.tv/?channel=gamers8gg_jp",
+            "language": "ja",
+            "main": false,
+            "official": false,
+            "raw_url": "https://www.twitch.tv/gamers8gg_jp"
+          },
+          {
+            "embed_url": "https://player.twitch.tv/?channel=rocketbaguette",
+            "language": "fr",
+            "main": false,
+            "official": false,
+            "raw_url": "https://www.twitch.tv/rocketbaguette"
+          },
+          {
+            "embed_url": "https://player.twitch.tv/?channel=gamers8gg",
+            "language": "en",
+            "main": true,
+            "official": true,
+            "raw_url": "https://www.twitch.tv/gamers8gg"
+          }
+        ],
+        "tournament_id": 11677,
+        "winner_id": 131998,
+        "winner_type": "Team"
+      },
+      {
+        "begin_at": "2023-08-27T19:41:28Z",
+        "detailed_stats": true,
+        "draw": false,
+        "end_at": "2023-08-27T20:25:57Z",
+        "forfeit": false,
+        "game_advantage": null,
+        "id": 829117,
+        "live": {
+          "opens_at": null,
+          "supported": false,
+          "url": null
+        },
+        "match_type": "best_of",
+        "modified_at": "2023-08-27T20:35:11Z",
+        "name": "Grand final: V1 vs Rule One",
+        "number_of_games": 7,
+        "original_scheduled_at": "2023-08-27T19:00:00Z",
+        "rescheduled": false,
+        "scheduled_at": "2023-08-27T19:00:00Z",
+        "slug": "version1-2023-08-27-77054552-71f7-47da-91e2-74d30d1fccc5",
+        "status": "finished",
+        "streams_list": [
+          {
+            "embed_url": "https://player.twitch.tv/?channel=gamers8gg_de",
+            "language": "de",
+            "main": false,
+            "official": false,
+            "raw_url": "https://www.twitch.tv/gamers8gg_de"
+          },
+          {
+            "embed_url": "https://player.twitch.tv/?channel=gamers8gg_jp",
+            "language": "ja",
+            "main": false,
+            "official": false,
+            "raw_url": "https://www.twitch.tv/gamers8gg_jp"
+          },
+          {
+            "embed_url": "https://player.twitch.tv/?channel=rocketbaguette",
+            "language": "fr",
+            "main": false,
+            "official": false,
+            "raw_url": "https://www.twitch.tv/rocketbaguette"
+          },
+          {
+            "embed_url": "https://player.twitch.tv/?channel=gamers8gg",
+            "language": "en",
+            "main": true,
+            "official": true,
+            "raw_url": "https://www.twitch.tv/gamers8gg"
+          }
+        ],
+        "tournament_id": 11677,
+        "winner_id": 127697,
+        "winner_type": "Team"
+      }
+    ],
+    "modified_at": "2023-08-28T06:34:54Z",
+    "name": "Playoffs",
+    "prizepool": "2000000 United States Dollar",
+    "serie": {
+      "begin_at": "2023-08-24T13:00:00Z",
+      "end_at": "2023-08-27T22:00:00Z",
+      "full_name": "2023",
+      "id": 6522,
+      "league_id": 4823,
+      "modified_at": "2023-08-21T12:42:58Z",
+      "name": null,
+      "season": null,
+      "slug": "rl-gamers8-2023",
+      "winner_id": null,
+      "winner_type": null,
+      "year": 2023
+    },
+    "serie_id": 6522,
+    "slug": "rl-gamers8-2023-playoffs",
+    "teams": [
+      {
+        "acronym": "BDS",
+        "id": 127413,
+        "image_url": "https://cdn.pandascore.co/images/team/image/127413/team_bd_slogo_square.png",
+        "location": "CH",
+        "modified_at": "2023-09-03T10:46:36Z",
+        "name": "Team BDS",
+        "slug": "team-bds"
+      },
+      {
+        "acronym": "OXG",
+        "id": 127530,
+        "image_url": "https://cdn.pandascore.co/images/team/image/127530/190px_oxygen_esports_2021_allmode.png",
+        "location": "US",
+        "modified_at": "2023-08-26T17:07:01Z",
+        "name": "Oxygen Esports",
+        "slug": "oxygen-esports-rl"
+      },
+      {
+        "acronym": "V1",
+        "id": 127697,
+        "image_url": "https://cdn.pandascore.co/images/team/image/127697/171px_version1_2021_allmode.png",
+        "location": "US",
+        "modified_at": "2023-08-30T13:43:50Z",
+        "name": "Version1",
+        "slug": "version1"
+      },
+      {
+        "acronym": "FURIA",
+        "id": 128933,
+        "image_url": "https://cdn.pandascore.co/images/team/image/128933/furia_esportslogo_square.png",
+        "location": "BR",
+        "modified_at": "2023-08-26T17:07:04Z",
+        "name": "FURIA Esports",
+        "slug": "furia-esports-rl"
+      },
+      {
+        "acronym": "VIT",
+        "id": 129919,
+        "image_url": "https://cdn.pandascore.co/images/team/image/129919/600px_team_vitality_2021_allmode.png",
+        "location": "FR",
+        "modified_at": "2023-08-26T17:07:05Z",
+        "name": "Vitality",
+        "slug": "vitality-rl"
+      },
+      {
+        "acronym": "FLCN",
+        "id": 131231,
+        "image_url": "https://cdn.pandascore.co/images/team/image/131231/600px_falcons_esports_allmode_full.png",
+        "location": "SA",
+        "modified_at": "2023-08-26T17:07:06Z",
+        "name": "Team Falcons",
+        "slug": "team-falcons-rl"
+      },
+      {
+        "acronym": null,
+        "id": 131998,
+        "image_url": "https://cdn.pandascore.co/images/team/image/131998/600px_rule_one_full_lightmode.png",
+        "location": "SA",
+        "modified_at": "2023-08-26T17:07:06Z",
+        "name": "Rule One",
+        "slug": "rule-one"
+      },
+      {
+        "acronym": "GENG",
+        "id": 133385,
+        "image_url": "https://cdn.pandascore.co/images/team/image/133385/600px_gen.g_mobil1_racing_2023_full_lightmode.png",
+        "location": "US",
+        "modified_at": "2023-08-26T17:07:07Z",
+        "name": "Gen.G Mobil1 Racing",
+        "slug": "gen-g-mobil1-racing"
+      }
+    ],
+    "tier": "b",
+    "videogame": {
+      "id": 22,
+      "name": "Rocket League",
+      "slug": "rl"
+    },
+    "videogame_title": null,
+    "winner_id": 127697,
+    "winner_type": "Team"
+  }
+]
