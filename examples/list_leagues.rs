@@ -13,7 +13,7 @@ async fn main() -> anyhow::Result<()> {
 
     let client = Client::new(reqwest::Client::new(), token)?;
     let response = client.execute(list_leagues).await?;
-    println!("{:#?}", response);
+    println!("{response:#?}");
 
     Ok(())
 }

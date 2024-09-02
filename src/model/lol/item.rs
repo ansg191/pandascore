@@ -1,7 +1,7 @@
 use compact_str::CompactString;
 use serde::Deserialize;
 
-#[derive(Debug, Clone, PartialEq, Deserialize)]
+#[derive(Debug, Clone, Eq, PartialEq, Deserialize)]
 pub struct Item {
     pub flat_armor_mod: Option<u64>,
     pub flat_crit_chance_mod: Option<u64>,

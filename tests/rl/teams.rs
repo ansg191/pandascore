@@ -13,7 +13,7 @@ async fn test_list_leagues() {
     let items = client.execute(ListTeams::default()).await.unwrap();
 
     assert_eq!(items.len(), 1);
-    assert_eq!(items[0].id, 133806);
+    assert_eq!(items[0].id, 133_806);
     assert_eq!(items[0].name, "Top Cougars");
     assert_eq!(items[0].slug, Some("top-cougars".into()));
     assert_eq!(items[0].acronym, Some("TP".into()));

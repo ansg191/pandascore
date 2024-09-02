@@ -43,7 +43,7 @@ pub struct CompactPlayer {
     /// In addition to the standard, the XK code is used for Kosovo.
     pub nationality: Option<CompactString>,
     /// Role/position of the player. Field value varies depending on the video game.
-    /// Note: role is only available for DotA 2, League of Legends, and Overwatch players.
+    /// Note: role is only available for DOTA 2, League of Legends, and Overwatch players.
     pub role: Option<CompactString>,
     /// Unique, human-readable identifier for the player.
     /// `id` and `slug` can be used interchangeably throughout the API.

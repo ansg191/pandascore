@@ -11,10 +11,9 @@ async fn main() -> anyhow::Result<()> {
     let arg = std::env::args().nth(1).unwrap_or_else(|| "293".to_owned());
     let status = std::env::args().nth(2);
 
-    let id = match arg.parse::<u64>() {
-        Ok(id) => Identifier::Id(id),
-        Err(_) => Identifier::Slug(&arg),
-    };
+    let id = arg
+        .parse::<u64>()
+        .map_or_else(|_| Identifier::Slug(&arg), Identifier::Id);
     let status = match status.as_deref() {
         None => None,
         Some("past") => Some(EventStatus::Past),
@@ -29,7 +28,7 @@ async fn main() -> anyhow::Result<()> {
 
     let client = Client::new(reqwest::Client::new(), token)?;
     let response = client.execute(get_league_matches).await?;
-    println!("{:#?}", response);
+    println!("{response:#?}");
 
     Ok(())
 }

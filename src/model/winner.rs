@@ -10,7 +10,7 @@ use crate::model::{player::CompactPlayer, team::CompactTeam};
 
 /// Winner object
 ///
-/// The PandaScore API returns multiple ways to represent the winner of various events.
+/// The `PandaScore` API returns multiple ways to represent the winner of various events.
 ///
 /// The various ways to represent the winner are:
 /// ```json
@@ -122,8 +122,9 @@ impl<'de> Visitor<'de> for WinnerVisitor {
                 // Either case 2 or 3
                 // Case 3
                 let winner = serde_json::from_value::<WinnerInternal>(obj.clone());
-                if let Ok(w) = winner {
-                    match w.r#type {
+                winner.map_or_else(
+                    |_| case2::<A>(tp, id, obj),
+                    |w| match w.r#type {
                         WinnerType::Team => Ok(Winner::Team {
                             id: Some(w.id),
                             team: None,
@@ -132,11 +133,8 @@ impl<'de> Visitor<'de> for WinnerVisitor {
                             id: Some(w.id),
                             player: None,
                         }),
-                    }
-                } else {
-                    // Case 2
-                    case2::<A>(tp, id, obj)
-                }
+                    },
+                )
             }
         }
     }

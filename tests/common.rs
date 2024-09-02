@@ -15,13 +15,15 @@ pub struct MockClient {
 }
 
 impl MockClient {
-    pub fn new(response: &'static [u8]) -> Self {
+    #[must_use]
+    pub const fn new(response: &'static [u8]) -> Self {
         Self {
             expectations: Vec::new(),
             response,
         }
     }
 
+    #[must_use]
     pub fn expect(mut self, expectation: Expectation) -> Self {
         self.expectations.push(expectation);
         self

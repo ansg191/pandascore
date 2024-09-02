@@ -30,7 +30,7 @@ async fn test_list_teams() {
 
     assert_eq!(response.len(), 6);
     assert_eq!(response[4].acronym, Some("T1".into()));
-    assert_eq!(response[4].id, 126061);
+    assert_eq!(response[4].id, 126_061);
     assert_eq!(response[4].players.len(), 6);
     assert_eq!(response[4].players[0].name, "Faker");
 }

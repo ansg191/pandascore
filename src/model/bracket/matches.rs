@@ -38,8 +38,8 @@ pub enum PreviousMatchType {
 impl Display for PreviousMatchType {
     fn fmt(&self, f: &mut Formatter<'_>) -> std::fmt::Result {
         match self {
-            PreviousMatchType::Winner => write!(f, "winner"),
-            PreviousMatchType::Loser => write!(f, "loser"),
+            Self::Winner => write!(f, "winner"),
+            Self::Loser => write!(f, "loser"),
         }
     }
 }
