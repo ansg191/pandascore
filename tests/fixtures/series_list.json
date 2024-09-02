@@ -1,0 +1,49 @@
+[
+  {
+    "begin_at": "2023-10-09T16:00:00Z",
+    "end_at": "2023-10-28T19:00:00Z",
+    "full_name": "Season 4 2023",
+    "id": 6714,
+    "league": {
+      "id": 5139,
+      "image_url": null,
+      "modified_at": "2023-09-26T14:15:14Z",
+      "name": "A1 Esport Valorant Cup",
+      "slug": "valorant-a1-esport-league",
+      "url": null
+    },
+    "league_id": 5139,
+    "modified_at": "2023-09-26T14:15:14Z",
+    "name": null,
+    "season": "4",
+    "slug": "valorant-a1-esport-league-4-2023",
+    "tournaments": [
+      {
+        "begin_at": "2023-10-09T16:00:00Z",
+        "detailed_stats": true,
+        "end_at": "2023-10-28T19:00:00Z",
+        "has_bracket": true,
+        "id": 12038,
+        "league_id": 5139,
+        "live_supported": false,
+        "modified_at": "2023-09-26T14:15:14Z",
+        "name": "Playoffs",
+        "prizepool": "5000 Euro",
+        "serie_id": 6714,
+        "slug": "valorant-a1-esport-league-4-2023-playoffs",
+        "tier": "d",
+        "winner_id": null,
+        "winner_type": "Team"
+      }
+    ],
+    "videogame": {
+      "id": 26,
+      "name": "Valorant",
+      "slug": "valorant"
+    },
+    "videogame_title": null,
+    "winner_id": null,
+    "winner_type": null,
+    "year": 2023
+  }
+]

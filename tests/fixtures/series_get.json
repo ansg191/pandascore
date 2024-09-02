@@ -1,0 +1,86 @@
+{
+  "begin_at": "2018-10-07T10:00:00Z",
+  "end_at": "2018-10-14T10:00:00Z",
+  "full_name": "Season 6 2018",
+  "id": 1626,
+  "league": {
+    "id": 4165,
+    "image_url": "https://cdn.pandascore.co/images/league/image/4165/800px-StarSeries_i-League_CSGO.png",
+    "modified_at": "2019-03-25T10:36:06Z",
+    "name": "StarSeries & i-League",
+    "slug": "cs-go-starseries-i-league",
+    "url": null
+  },
+  "league_id": 4165,
+  "modified_at": "2022-08-11T13:05:34Z",
+  "name": null,
+  "season": "6",
+  "slug": "cs-go-starseries-i-league-6-2018",
+  "tournaments": [
+    {
+      "begin_at": "2018-10-07T10:00:00Z",
+      "detailed_stats": true,
+      "end_at": "2018-10-14T10:00:00Z",
+      "has_bracket": false,
+      "id": 1744,
+      "league_id": 4165,
+      "live_supported": true,
+      "modified_at": "2022-08-11T13:05:34Z",
+      "name": "Group Stage",
+      "prizepool": null,
+      "serie_id": 1626,
+      "slug": "cs-go-starseries-i-league-6-2018-regular",
+      "tier": "a",
+      "winner_id": 3251,
+      "winner_type": "Team"
+    },
+    {
+      "begin_at": "2018-10-07T10:00:00Z",
+      "detailed_stats": false,
+      "end_at": "2018-10-14T10:00:00Z",
+      "has_bracket": false,
+      "id": 1974,
+      "league_id": 4165,
+      "live_supported": true,
+      "modified_at": "2022-08-11T13:05:34Z",
+      "name": "Regular",
+      "prizepool": null,
+      "serie_id": 1626,
+      "slug": "cs-go-starseries-i-league-6-2018-regular-cc0b2a7a-6ab8-48a6-86f1-11516b38bcf7",
+      "tier": null,
+      "winner_id": 3251,
+      "winner_type": "Team"
+    },
+    {
+      "begin_at": "2018-10-12T10:00:00Z",
+      "detailed_stats": true,
+      "end_at": "2018-10-14T14:00:00Z",
+      "has_bracket": true,
+      "id": 1838,
+      "league_id": 4165,
+      "live_supported": true,
+      "modified_at": "2022-08-11T13:05:34Z",
+      "name": "Playoffs",
+      "prizepool": "265000 United States Dollar",
+      "serie_id": 1626,
+      "slug": "cs-go-starseries-i-league-6-2018-swiss-round",
+      "tier": null,
+      "winner_id": 3251,
+      "winner_type": "Team"
+    }
+  ],
+  "videogame": {
+    "id": 3,
+    "name": "Counter-Strike",
+    "slug": "cs-go"
+  },
+  "videogame_title": {
+    "id": 12,
+    "name": "Counter-Strike: Global Offensive",
+    "slug": "cs-go",
+    "videogame_id": 3
+  },
+  "winner_id": 3251,
+  "winner_type": "Team",
+  "year": 2018
+}
