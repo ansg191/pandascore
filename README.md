@@ -14,7 +14,7 @@ Currently **only** supports the free tier of the API.
   * [x] Players
   * [x] Series
   * [x] Teams
-  * [ ] Tournaments
+  * [x] Tournaments
   * [ ] Video Games
 * [ ] “League of Legends” endpoints
   * [x] Champions

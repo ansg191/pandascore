@@ -5,8 +5,12 @@ use serde::Deserialize;
 use time::OffsetDateTime;
 
 use crate::model::{
-    league::CompactLeague, matches::CompactMatch, player::CompactPlayer, series::CompactSeries,
-    team::CompactTeam, VideoGame, Winner,
+    league::CompactLeague,
+    matches::CompactMatch,
+    player::{CompactPlayer, Player},
+    series::CompactSeries,
+    team::{CompactTeam, Team},
+    VideoGame, Winner,
 };
 
 #[derive(Debug, Clone, Eq, PartialEq, Hash, Deserialize)]
@@ -94,4 +98,35 @@ impl From<Tournament> for CompactTournament {
     fn from(series: Tournament) -> Self {
         series.inner
     }
+}
+
+#[derive(Debug, Clone, Eq, PartialEq, Hash, Deserialize)]
+#[serde(tag = "type", content = "rosters")]
+pub enum TournamentRosters {
+    Team(Vec<Team>),
+    Player(Vec<Player>),
+}
+#[derive(Debug, Clone, Eq, PartialEq, Hash, Deserialize)]
+#[serde(untagged)]
+#[allow(clippy::large_enum_variant)]
+pub enum TournamentStanding {
+    Bracket(BracketStanding),
+    Group(GroupStanding),
+}
+
+#[derive(Debug, Clone, Eq, PartialEq, Hash, Deserialize)]
+pub struct BracketStanding {
+    pub last_match: CompactMatch,
+    pub rank: u64,
+    pub team: CompactTeam,
+}
+
+#[derive(Debug, Clone, Eq, PartialEq, Hash, Deserialize)]
+pub struct GroupStanding {
+    pub losses: u64,
+    pub rank: u64,
+    pub team: CompactTeam,
+    pub ties: Option<u64>,
+    pub total: u64,
+    pub wins: u64,
 }
