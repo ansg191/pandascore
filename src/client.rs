@@ -58,6 +58,26 @@ where
         self.client.clone().oneshot(request).await
     }
 
+    /// Execute the given request and return the response.
+    ///
+    /// # Arguments
+    ///
+    /// * `request`: a endpoint request to execute.
+    ///
+    /// Returns: `Result<<R as Sealed>::Response, EndpointError>`
+    ///
+    /// # Examples
+    ///
+    /// ```rust,no_run
+    /// use pandascore::{Client, endpoint::all::players::GetPlayer};
+    ///
+    /// # #[tokio::main]
+    /// # async fn main() {
+    /// let client = Client::new(reqwest::Client::new(), "token").unwrap();
+    /// let player = client.execute(GetPlayer::from("faker")).await.unwrap();
+    /// println!("{:?}", player);
+    /// # }
+    /// ```
     pub async fn execute<R>(&self, request: R) -> Result<R::Response, EndpointError>
     where
         R: Endpoint,

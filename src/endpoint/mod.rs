@@ -1,3 +1,5 @@
+//! Endpoints for the `PandaScore` API.
+
 // Due to bon: fix these later
 #![allow(private_bounds, clippy::missing_const_for_fn)]
 
@@ -34,6 +36,9 @@ mod sealed {
     }
 }
 
+/// Represents an endpoint in the `PandaScore` API.
+///
+/// This trait is sealed and can't be implemented outside this crate.
 pub trait Endpoint: sealed::Sealed {}
 
 impl<T: sealed::Sealed> Endpoint for T {}
@@ -44,6 +49,7 @@ async fn deserialize<T: DeserializeOwned>(response: reqwest::Response) -> Result
     Ok(serde_path_to_error::deserialize(&mut jd)?)
 }
 
+/// Represents an error that occurred while interacting with an endpoint.
 #[derive(Debug, thiserror::Error)]
 pub enum EndpointError {
     #[error(transparent)]
@@ -58,6 +64,7 @@ pub enum EndpointError {
     InvalidInt(#[from] std::num::ParseIntError),
 }
 
+/// Options for filtering, searching, sorting, and paginating a collection.
 #[derive(Debug, Clone, Eq, PartialEq, Default)]
 pub struct CollectionOptions {
     /// <https://developers.pandascore.co/docs/filtering-and-sorting#filter>
@@ -76,11 +83,16 @@ pub struct CollectionOptions {
 }
 
 impl CollectionOptions {
+    /// Creates a new empty set of collection options.
     #[must_use]
     pub fn new() -> Self {
         Self::default()
     }
 
+    /// Adds a filter to the collection options.
+    /// If the filter already exists, the value is appended to the existing values.
+    ///
+    /// <https://developers.pandascore.co/docs/filtering-and-sorting#filter>
     #[must_use]
     pub fn filter(
         mut self,
@@ -94,6 +106,10 @@ impl CollectionOptions {
         self
     }
 
+    /// Adds a search to the collection options.
+    /// If the search already exists, the value is overwritten.
+    ///
+    /// <https://developers.pandascore.co/docs/filtering-and-sorting#search>
     #[must_use]
     pub fn search(
         mut self,
@@ -104,24 +120,38 @@ impl CollectionOptions {
         self
     }
 
+    /// Adds a range to the collection options.
+    /// If the range already exists, the value is overwritten.
+    ///
+    /// <https://developers.pandascore.co/docs/filtering-and-sorting#range>
     #[must_use]
     pub fn range(mut self, key: impl Into<CompactString>, start: i64, end: i64) -> Self {
         self.range.insert(key.into(), (start, end));
         self
     }
 
+    /// Adds a sort to the collection options.
+    /// If a sort already exists, the value is appended to the existing values as a secondary sort.
+    ///
+    /// <https://developers.pandascore.co/docs/filtering-and-sorting#sort>
     #[must_use]
     pub fn sort(mut self, key: impl Into<CompactString>) -> Self {
         self.sort.insert(key.into());
         self
     }
 
+    /// Sets the page number for the collection options.
+    ///
+    /// <https://developers.pandascore.co/docs/pagination#page-number>
     #[must_use]
     pub const fn page(mut self, page: u32) -> Self {
         self.page = Some(page);
         self
     }
 
+    /// Sets the number of items per page for the collection options.
+    ///
+    /// <https://developers.pandascore.co/docs/pagination#page-size>
     #[must_use]
     pub const fn per_page(mut self, per_page: u32) -> Self {
         self.per_page = Some(per_page);
@@ -226,6 +256,9 @@ static KEY_REGEX: LazyLock<Regex> = LazyLock::new(|| {
     Regex::new(r"([a-z]+)(\[(.+)])?").unwrap()
 });
 
+/// Represents a response from a collection endpoint.
+/// Contains the results, total number of results,
+/// and pagination options for retrieving more results.
 #[derive(Debug, Clone, Eq, PartialEq)]
 pub struct ListResponse<T> {
     pub results: Vec<T>,
