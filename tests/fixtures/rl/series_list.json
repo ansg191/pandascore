@@ -1,0 +1,31 @@
+[
+  {
+    "begin_at": "2023-08-03T08:00:00Z",
+    "end_at": null,
+    "full_name": "2023",
+    "id": 6116,
+    "league": {
+      "id": 4834,
+      "image_url": null,
+      "modified_at": "2022-07-26T00:58:00Z",
+      "name": "RLCS World Championship",
+      "slug": "rl-rlcs-world-championship",
+      "url": null
+    },
+    "league_id": 4834,
+    "modified_at": "2023-07-24T15:47:38Z",
+    "name": null,
+    "season": null,
+    "slug": "rl-rlcs-world-championship-2023",
+    "tournaments": [],
+    "videogame": {
+      "id": 22,
+      "name": "Rocket League",
+      "slug": "rl"
+    },
+    "videogame_title": null,
+    "winner_id": null,
+    "winner_type": null,
+    "year": 2023
+  }
+]
