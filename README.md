@@ -12,7 +12,7 @@ Currently **only** supports the free tier of the API.
   * [ ] Lives
   * [x] Matches
   * [x] Players
-  * [ ] Series
+  * [x] Series
   * [x] Teams
   * [ ] Tournaments
   * [ ] Video Games
