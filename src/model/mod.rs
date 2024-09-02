@@ -44,8 +44,8 @@ impl<'a> From<&'a str> for Identifier<'a> {
 impl Display for Identifier<'_> {
     fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
         match self {
-            Self::Id(id) => write!(f, "{}", id),
-            Self::Slug(slug) => write!(f, "{}", slug),
+            Self::Id(id) => write!(f, "{id}"),
+            Self::Slug(slug) => write!(f, "{slug}"),
         }
     }
 }
@@ -58,7 +58,8 @@ pub enum EventStatus {
 }
 
 impl EventStatus {
-    pub fn as_str(&self) -> &'static str {
+    #[must_use]
+    pub const fn as_str(&self) -> &'static str {
         match self {
             Self::Past => "past",
             Self::Running => "running",

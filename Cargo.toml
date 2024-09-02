@@ -28,3 +28,25 @@ anyhow = "1"
 http = "1"
 reqwest = "0.12.7"
 tokio = { version = "1.39.3", features = ["macros", "rt", "rt-multi-thread"] }
+
+[lints.rust]
+unused_crate_dependencies = "warn"
+
+[lints.clippy]
+pedantic = { level = "warn", priority = -1 }
+nursery = { level = "warn", priority = -2 }
+
+as_underscore = "warn"
+clone_on_ref_ptr = "warn"
+format_push_string = "warn"
+str_to_string = "warn"
+renamed_function_params = "warn"
+
+multiple_unsafe_ops_per_block = "deny"
+undocumented_unsafe_blocks = "deny"
+
+module_name_repetitions = "allow"
+struct_excessive_bools = "allow"
+
+missing_errors_doc = "warn"
+missing_panics_doc = "warn"

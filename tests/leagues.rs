@@ -88,7 +88,7 @@ async fn test_get_league_matches() {
     let response = client.execute(get_league_matches).await.unwrap();
 
     assert_eq!(response.len(), 1);
-    assert_eq!(response[0].id, 847936);
+    assert_eq!(response[0].id, 847_936);
     assert_eq!(response[0].league_id, 5139);
     assert_eq!(response[0].name, "Grand final: TBD vs TBD");
     // assert_eq!(response[0].winner, Some(Winner::Team { id: None }));
@@ -109,7 +109,7 @@ async fn test_get_league_upcoming_matches() {
     let response = client.execute(get_league_matches).await.unwrap();
 
     assert_eq!(response.len(), 1);
-    assert_eq!(response[0].id, 847936);
+    assert_eq!(response[0].id, 847_936);
     assert_eq!(response[0].league_id, 5139);
     assert_eq!(response[0].name, "Grand final: TBD vs TBD");
     // assert_eq!(response[0].winner, Some(Winner::Team { id: None }));

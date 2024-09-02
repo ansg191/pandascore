@@ -51,5 +51,5 @@ async fn test_get_player() {
     assert_eq!(
         response.birthday,
         Some(Date::from_calendar_date(1996, Month::May, 7).unwrap())
-    )
+    );
 }

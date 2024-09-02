@@ -23,7 +23,7 @@ async fn test_get_tournament_rosters() {
         unreachable!();
     };
     assert_eq!(teams.len(), 9);
-    assert_eq!(teams[0].id, 126059);
+    assert_eq!(teams[0].id, 126_059);
     assert_eq!(teams[0].name, "Top Esports");
 }
 

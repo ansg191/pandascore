@@ -1,5 +1,5 @@
-// Fix this later
-#![allow(private_bounds)]
+// Due to bon: fix these later
+#![allow(private_bounds, clippy::missing_const_for_fn)]
 
 use std::{
     collections::{HashMap, HashSet},
@@ -76,10 +76,12 @@ pub struct CollectionOptions {
 }
 
 impl CollectionOptions {
+    #[must_use]
     pub fn new() -> Self {
         Self::default()
     }
 
+    #[must_use]
     pub fn filter(
         mut self,
         key: impl Into<CompactString>,
@@ -92,6 +94,7 @@ impl CollectionOptions {
         self
     }
 
+    #[must_use]
     pub fn search(
         mut self,
         key: impl Into<CompactString>,
@@ -101,22 +104,26 @@ impl CollectionOptions {
         self
     }
 
+    #[must_use]
     pub fn range(mut self, key: impl Into<CompactString>, start: i64, end: i64) -> Self {
         self.range.insert(key.into(), (start, end));
         self
     }
 
+    #[must_use]
     pub fn sort(mut self, key: impl Into<CompactString>) -> Self {
         self.sort.insert(key.into());
         self
     }
 
-    pub fn page(mut self, page: u32) -> Self {
+    #[must_use]
+    pub const fn page(mut self, page: u32) -> Self {
         self.page = Some(page);
         self
     }
 
-    pub fn per_page(mut self, per_page: u32) -> Self {
+    #[must_use]
+    pub const fn per_page(mut self, per_page: u32) -> Self {
         self.per_page = Some(per_page);
         self
     }
@@ -137,7 +144,7 @@ impl CollectionOptions {
 
         for (key, (start, end)) in self.range {
             let key = format_compact!("range[{}]", key);
-            let value = format!("{},{}", start, end);
+            let value = format!("{start},{end}");
             query.append_pair(&key, &value);
         }
 
@@ -216,7 +223,7 @@ impl CollectionOptions {
 static KEY_REGEX: LazyLock<Regex> = LazyLock::new(|| {
     // Matches "filter[...]", "search[...]", "range[...]", "sort"
     // https://regex101.com/r/ZPylAq/1
-    Regex::new(r#"([a-z]+)(\[(.+)])?"#).unwrap()
+    Regex::new(r"([a-z]+)(\[(.+)])?").unwrap()
 });
 
 #[derive(Debug, Clone, Eq, PartialEq)]
@@ -261,10 +268,8 @@ impl<T: DeserializeOwned> ListResponse<T> {
 
         for (i, link) in links.iter().enumerate() {
             // Find `rel=` attribute between this link and the next
-            let substr = &link_str[link.start()
-                ..links
-                    .get(i + 1)
-                    .map_or_else(|| link_str.len(), |next| next.start())];
+            let substr = &link_str
+                [link.start()..links.get(i + 1).map_or_else(|| link_str.len(), Link::start)];
 
             let Some(captures) = LINK_REL_REGEX.captures(substr) else {
                 // No `rel=` attribute found
@@ -313,7 +318,7 @@ where
         .get(header)
         .map(|v| v.to_str())
         .transpose()?
-        .map(|v| v.parse::<T>())
+        .map(str::parse)
         .transpose()?)
 }
 

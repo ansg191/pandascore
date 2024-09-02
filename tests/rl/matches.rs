@@ -13,7 +13,7 @@ async fn test_list_matches() {
     let items = client.execute(ListMatches::default()).await.unwrap();
 
     assert_eq!(items.len(), 1);
-    assert_eq!(items[0].id, 590910);
+    assert_eq!(items[0].id, 590_910);
     assert_eq!(items[0].league_id, 4245);
     assert_eq!(items[0].serie_id, 3568);
     assert_eq!(items[0].tournament_id, 5951);

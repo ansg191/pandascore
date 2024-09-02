@@ -48,6 +48,7 @@ impl TournamentBracket {
     // }
 
     /// Check if the bracket is acyclic.
+    #[must_use]
     pub fn is_asyclic(&self) -> bool {
         petgraph::algo::is_cyclic_directed(&self.tree)
     }
@@ -93,6 +94,7 @@ impl TournamentBracket {
     /// │ D ├──┘
     /// └───┘
     /// ```
+    #[must_use]
     pub fn sub_brackets(&self) -> usize {
         petgraph::algo::connected_components(&self.tree)
     }
