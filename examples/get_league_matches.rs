@@ -22,7 +22,10 @@ async fn main() -> anyhow::Result<()> {
         Some("upcoming") => Some(EventStatus::Upcoming),
         Some(status) => return Err(anyhow::anyhow!("Invalid status: {}", status)),
     };
-    let get_league_matches = GetLeagueMatches::builder().id(id).status(status).build()?;
+    let get_league_matches = GetLeagueMatches::builder()
+        .id(id)
+        .maybe_status(status)
+        .build();
 
     let client = Client::new(reqwest::Client::new(), token)?;
     let response = client.execute(get_league_matches).await?;
