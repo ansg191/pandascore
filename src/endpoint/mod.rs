@@ -3,7 +3,7 @@
 use std::{
     collections::{HashMap, HashSet},
     ops::{Deref, DerefMut},
-    sync::LazyLock,
+    sync::OnceLock,
 };
 
 use compact_str::{format_compact, CompactString, CompactStringExt, ToCompactString};
@@ -194,7 +194,7 @@ impl CollectionOptions {
 
         let mut ret = Self::default();
         for (key, value) in query {
-            let Some(captures) = KEY_REGEX.captures(&key) else {
+            let Some(captures) = get_key_regex().captures(&key) else {
                 continue;
             };
 
@@ -247,11 +247,13 @@ impl CollectionOptions {
     }
 }
 
-static KEY_REGEX: LazyLock<Regex> = LazyLock::new(|| {
+static KEY_REGEX: OnceLock<Regex> = OnceLock::new();
+
+fn get_key_regex() -> &'static Regex {
     // Matches "filter[...]", "search[...]", "range[...]", "sort"
     // https://regex101.com/r/ZPylAq/1
-    Regex::new(r"([a-z]+)(\[(.+)])?").unwrap()
-});
+    KEY_REGEX.get_or_init(|| Regex::new(r"([a-z]+)(\[(.+)])?").unwrap())
+}
 
 /// Represents a response from a collection endpoint.
 /// Contains the results, total number of results,
@@ -264,7 +266,11 @@ pub struct ListResponse<T> {
     pub prev: Option<CollectionOptions>,
 }
 
-static LINK_REL_REGEX: LazyLock<Regex> = LazyLock::new(|| Regex::new(r#"rel="([a-z]+)""#).unwrap());
+static LINK_REL_REGEX: OnceLock<Regex> = OnceLock::new();
+
+fn get_link_rel_regex() -> &'static Regex {
+    LINK_REL_REGEX.get_or_init(|| Regex::new(r#"rel="([a-z]+)""#).unwrap())
+}
 
 impl<T: DeserializeOwned> ListResponse<T> {
     async fn from_response(response: reqwest::Response) -> Result<Self, EndpointError> {
@@ -301,7 +307,7 @@ impl<T: DeserializeOwned> ListResponse<T> {
             let substr = &link_str
                 [link.start()..links.get(i + 1).map_or_else(|| link_str.len(), Link::start)];
 
-            let Some(captures) = LINK_REL_REGEX.captures(substr) else {
+            let Some(captures) = get_link_rel_regex().captures(substr) else {
                 // No `rel=` attribute found
                 continue;
             };
