@@ -9,11 +9,10 @@ use crate::{
 crate::endpoint::list_endpoint!(ListLeagues("/leagues") => League);
 crate::endpoint::get_endpoint!(GetLeague("/leagues") => League);
 
-#[derive(Debug, Clone, PartialEq, Eq, typed_builder::TypedBuilder)]
+#[derive(Debug, Clone, PartialEq, Eq, bon::Builder)]
 pub struct GetLeagueMatches<'a> {
-    #[builder(setter(into))]
+    #[builder(into)]
     id: Identifier<'a>,
-    #[builder(default, setter(strip_option(fallback = status_opt)))]
     status: Option<EventStatus>,
     #[builder(default)]
     options: CollectionOptions,
@@ -36,9 +35,9 @@ impl Sealed for GetLeagueMatches<'_> {
     }
 }
 
-#[derive(Debug, Clone, PartialEq, Eq, typed_builder::TypedBuilder)]
+#[derive(Debug, Clone, PartialEq, Eq, bon::Builder)]
 pub struct ListLeagueSeries<'a> {
-    #[builder(setter(into))]
+    #[builder(into)]
     id: Identifier<'a>,
     #[builder(default)]
     options: CollectionOptions,

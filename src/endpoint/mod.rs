@@ -463,9 +463,8 @@ pub(crate) use list_endpoint;
 
 macro_rules! multi_list_endpoint {
     ($name:ident($path:expr) => $response:ty) => {
-        #[derive(Debug, Clone, Eq, PartialEq, Default, typed_builder::TypedBuilder)]
+        #[derive(Debug, Clone, Eq, PartialEq, Default, ::bon::Builder)]
         pub struct $name {
-            #[builder(default, setter(strip_option(fallback = status_opt)))]
             pub status: ::std::option::Option<$crate::model::EventStatus>,
             #[builder(default)]
             pub options: $crate::endpoint::CollectionOptions,

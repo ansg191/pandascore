@@ -45,9 +45,9 @@ where
     }
 }
 
-#[derive(Debug, Clone, PartialEq, Eq, typed_builder::TypedBuilder)]
+#[derive(Debug, Clone, PartialEq, Eq, bon::Builder)]
 pub struct ListTournamentMatches<'a> {
-    #[builder(setter(into))]
+    #[builder(into)]
     pub id: Identifier<'a>,
     #[builder(default)]
     pub options: CollectionOptions,
@@ -69,9 +69,9 @@ impl Sealed for ListTournamentMatches<'_> {
     }
 }
 
-#[derive(Debug, Clone, PartialEq, Eq, typed_builder::TypedBuilder)]
+#[derive(Debug, Clone, PartialEq, Eq, bon::Builder)]
 pub struct ListTournamentTeams<'a> {
-    #[builder(setter(into))]
+    #[builder(into)]
     pub id: Identifier<'a>,
     #[builder(default)]
     pub options: CollectionOptions,
@@ -118,9 +118,9 @@ where
     }
 }
 
-#[derive(Debug, Clone, Eq, PartialEq, typed_builder::TypedBuilder)]
+#[derive(Debug, Clone, Eq, PartialEq, bon::Builder)]
 pub struct GetTournamentStandings<'a> {
-    #[builder(setter(into))]
+    #[builder(into)]
     pub id: Identifier<'a>,
     #[builder(default)]
     pub options: CollectionOptions,
