@@ -1,11 +1,5 @@
 name: Lint Commit Messages
-on:
-  pull_request:
-    branches-ignore:
-      - '*dependabot/github_actions/*'
-  push:
-    branches-ignore:
-      - '*dependabot/github_actions/*'
+on: [push, pull_request]
 
 permissions:
   contents: read
