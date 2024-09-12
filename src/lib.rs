@@ -56,4 +56,4 @@ mod client;
 pub mod endpoint;
 pub mod model;
 
-pub use client::Client;
+pub use client::{Client, ClientTransport};

@@ -6,6 +6,10 @@ use tower::{Service, ServiceExt};
 
 use crate::endpoint::{Endpoint, EndpointError};
 
+/// A trait for the underlying HTTP client implementation.
+pub trait ClientTransport: Service<Request, Response = Response, Error = Error> + Clone {}
+impl<T> ClientTransport for T where T: Service<Request, Response = Response, Error = Error> + Clone {}
+
 /// A client that can execute requests to the API.
 ///
 /// The client is generic over the underlying HTTP client implementation.
@@ -22,10 +26,7 @@ pub struct Client<T> {
 }
 
 #[allow(clippy::future_not_send)]
-impl<T> Client<T>
-where
-    T: Service<Request, Response = Response, Error = Error> + Clone,
-{
+impl<T: ClientTransport> Client<T> {
     /// Create a new client with the given underlying client and token.
     ///
     /// # Arguments
