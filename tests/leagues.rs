@@ -32,8 +32,8 @@ async fn test_list_leagues_options() {
     let client = MockClient::new(include_bytes!("./fixtures/list_leagues.json"))
         .expect(Expectation::Method(reqwest::Method::GET))
         .expect(Expectation::Path("/leagues"))
-        .expect(Expectation::Query("page[number]", "1"))
-        .expect(Expectation::Query("page[size]", "10"))
+        .expect(Expectation::Query("page", "1"))
+        .expect(Expectation::Query("per_page", "10"))
         .expect(Expectation::Query("filter[name]", "A1 Esport Valorant Cup"))
         .expect(Expectation::Query("sort", "name"));
 

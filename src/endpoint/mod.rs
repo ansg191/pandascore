@@ -181,10 +181,12 @@ impl CollectionOptions {
         }
 
         if let Some(page) = self.page {
-            query.append_pair("page[number]", &page.to_compact_string());
+            // query.append_pair("page[number]", &page.to_compact_string());
+            query.append_pair("page", &page.to_compact_string());
         }
         if let Some(per_page) = self.per_page {
-            query.append_pair("page[size]", &per_page.to_compact_string());
+            // query.append_pair("page[size]", &per_page.to_compact_string());
+            query.append_pair("per_page", &per_page.to_compact_string());
         }
     }
 
@@ -251,8 +253,8 @@ static KEY_REGEX: OnceLock<Regex> = OnceLock::new();
 
 fn get_key_regex() -> &'static Regex {
     // Matches "filter[...]", "search[...]", "range[...]", "sort"
-    // https://regex101.com/r/ZPylAq/1
-    KEY_REGEX.get_or_init(|| Regex::new(r"([a-z]+)(\[(.+)])?").unwrap())
+    // https://regex101.com/r/3snY41/1
+    KEY_REGEX.get_or_init(|| Regex::new(r"([a-z_]+)(\[(.+)])?").unwrap())
 }
 
 /// Represents a response from a collection endpoint.
