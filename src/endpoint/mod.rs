@@ -253,8 +253,8 @@ static KEY_REGEX: OnceLock<Regex> = OnceLock::new();
 
 fn get_key_regex() -> &'static Regex {
     // Matches "filter[...]", "search[...]", "range[...]", "sort"
-    // https://regex101.com/r/ZPylAq/1
-    KEY_REGEX.get_or_init(|| Regex::new(r"([a-z]+)(\[(.+)])?").unwrap())
+    // https://regex101.com/r/3snY41/1
+    KEY_REGEX.get_or_init(|| Regex::new(r"([a-z_]+)(\[(.+)])?").unwrap())
 }
 
 /// Represents a response from a collection endpoint.
