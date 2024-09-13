@@ -181,10 +181,12 @@ impl CollectionOptions {
         }
 
         if let Some(page) = self.page {
-            query.append_pair("page[number]", &page.to_compact_string());
+            // query.append_pair("page[number]", &page.to_compact_string());
+            query.append_pair("page", &page.to_compact_string());
         }
         if let Some(per_page) = self.per_page {
-            query.append_pair("page[size]", &per_page.to_compact_string());
+            // query.append_pair("page[size]", &per_page.to_compact_string());
+            query.append_pair("per_page", &per_page.to_compact_string());
         }
     }
 
