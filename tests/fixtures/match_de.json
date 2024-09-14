@@ -1,0 +1,237 @@
+{
+  "match_type": "best_of",
+  "begin_at": "2024-09-08T06:24:00Z",
+  "status": "finished",
+  "videogame": {
+    "id": 1,
+    "name": "LoL",
+    "slug": "league-of-legends"
+  },
+  "videogame_title": null,
+  "tournament": {
+    "begin_at": "2024-08-22T22:00:00Z",
+    "detailed_stats": true,
+    "end_at": "2024-09-08T11:24:00Z",
+    "has_bracket": true,
+    "id": 14032,
+    "league_id": 293,
+    "live_supported": true,
+    "modified_at": "2024-09-10T07:48:11Z",
+    "name": "Playoffs",
+    "prizepool": null,
+    "serie_id": 7573,
+    "slug": "league-of-legends-lck-champions-korea-summer-2024-playoffs",
+    "tier": "a",
+    "winner_id": 2883,
+    "winner_type": "Team"
+  },
+  "rescheduled": true,
+  "slug": "gen-g-2024-09-08",
+  "id": 1000450,
+  "tournament_id": 14032,
+  "name": "Grand final: GEN vs HLE",
+  "winner_id": 2883,
+  "live": {
+    "opens_at": "2024-09-08T06:09:00.000000Z",
+    "supported": true,
+    "url": "wss://live.pandascore.co/matches/1000450"
+  },
+  "streams_list": [
+    {
+      "embed_url": "https://player.twitch.tv/?channel=otplol_",
+      "language": "fr",
+      "main": false,
+      "official": false,
+      "raw_url": "https://www.twitch.tv/otplol_"
+    },
+    {
+      "embed_url": "https://player.twitch.tv/?channel=lck_carry",
+      "language": "zh",
+      "main": false,
+      "official": false,
+      "raw_url": "https://www.twitch.tv/lck_carry"
+    },
+    {
+      "embed_url": "https://player.twitch.tv/?channel=lck",
+      "language": "en",
+      "main": true,
+      "official": true,
+      "raw_url": "https://www.twitch.tv/lck"
+    }
+  ],
+  "videogame_version": {
+    "current": false,
+    "name": "14.16.1"
+  },
+  "results": [
+    {
+      "score": 2,
+      "team_id": 2882
+    },
+    {
+      "score": 3,
+      "team_id": 2883
+    }
+  ],
+  "league": {
+    "id": 293,
+    "image_url": "https://cdn.pandascore.co/images/league/image/293/LCK_2021_logo.png",
+    "modified_at": "2021-01-06T15:41:48Z",
+    "name": "LCK",
+    "slug": "league-of-legends-lck-champions-korea",
+    "url": null
+  },
+  "forfeit": false,
+  "league_id": 293,
+  "detailed_stats": true,
+  "serie": {
+    "begin_at": "2024-06-12T08:00:00Z",
+    "end_at": "2024-09-14T11:00:00Z",
+    "full_name": "Summer 2024",
+    "id": 7573,
+    "league_id": 293,
+    "modified_at": "2024-07-31T17:00:04Z",
+    "name": "",
+    "season": "Summer",
+    "slug": "league-of-legends-lck-champions-korea-summer-2024",
+    "winner_id": null,
+    "winner_type": "Team",
+    "year": 2024
+  },
+  "opponents": [
+    {
+      "opponent": {
+        "acronym": "GEN",
+        "id": 2882,
+        "image_url": "https://cdn.pandascore.co/images/team/image/2882/geng-hooir6i9.png",
+        "location": "KR",
+        "modified_at": "2024-08-18T12:05:04Z",
+        "name": "Gen.G",
+        "slug": "geng"
+      },
+      "type": "Team"
+    },
+    {
+      "opponent": {
+        "acronym": "HLE",
+        "id": 2883,
+        "image_url": "https://cdn.pandascore.co/images/team/image/2883/hanwha-life-esports-1s04vbu0.png",
+        "location": "KR",
+        "modified_at": "2024-08-18T12:05:05Z",
+        "name": "Hanwha Life Esports",
+        "slug": "hanwha-life-esports"
+      },
+      "type": "Team"
+    }
+  ],
+  "winner_type": "Team",
+  "number_of_games": 5,
+  "serie_id": 7573,
+  "original_scheduled_at": "2024-09-14T06:00:00Z",
+  "games": [
+    {
+      "begin_at": "2024-09-08T06:24:00Z",
+      "complete": true,
+      "detailed_stats": true,
+      "end_at": "2024-09-08T07:16:38Z",
+      "finished": true,
+      "forfeit": false,
+      "id": 259678,
+      "length": 2412,
+      "match_id": 1000450,
+      "position": 1,
+      "status": "finished",
+      "winner": {
+        "id": 2883,
+        "type": "Team"
+      },
+      "winner_type": "Team"
+    },
+    {
+      "begin_at": "2024-09-08T07:34:45Z",
+      "complete": true,
+      "detailed_stats": true,
+      "end_at": "2024-09-08T08:19:39Z",
+      "finished": true,
+      "forfeit": false,
+      "id": 259679,
+      "length": 2273,
+      "match_id": 1000450,
+      "position": 2,
+      "status": "finished",
+      "winner": {
+        "id": 2882,
+        "type": "Team"
+      },
+      "winner_type": "Team"
+    },
+    {
+      "begin_at": "2024-09-08T08:36:20Z",
+      "complete": true,
+      "detailed_stats": true,
+      "end_at": "2024-09-08T09:15:41Z",
+      "finished": true,
+      "forfeit": false,
+      "id": 259680,
+      "length": 2016,
+      "match_id": 1000450,
+      "position": 3,
+      "status": "finished",
+      "winner": {
+        "id": 2882,
+        "type": "Team"
+      },
+      "winner_type": "Team"
+    },
+    {
+      "begin_at": "2024-09-08T09:31:54Z",
+      "complete": true,
+      "detailed_stats": true,
+      "end_at": "2024-09-08T10:16:57Z",
+      "finished": true,
+      "forfeit": false,
+      "id": 259681,
+      "length": 1809,
+      "match_id": 1000450,
+      "position": 4,
+      "status": "finished",
+      "winner": {
+        "id": 2883,
+        "type": "Team"
+      },
+      "winner_type": "Team"
+    },
+    {
+      "begin_at": "2024-09-08T10:35:46Z",
+      "complete": true,
+      "detailed_stats": true,
+      "end_at": "2024-09-08T11:24:37Z",
+      "finished": true,
+      "forfeit": false,
+      "id": 259682,
+      "length": 2291,
+      "match_id": 1000450,
+      "position": 5,
+      "status": "finished",
+      "winner": {
+        "id": 2883,
+        "type": "Team"
+      },
+      "winner_type": "Team"
+    }
+  ],
+  "modified_at": "2024-09-08T11:29:41Z",
+  "scheduled_at": "2024-09-08T06:25:00Z",
+  "game_advantage": null,
+  "winner": {
+    "acronym": "HLE",
+    "id": 2883,
+    "image_url": "https://cdn.pandascore.co/images/team/image/2883/hanwha-life-esports-1s04vbu0.png",
+    "location": "KR",
+    "modified_at": "2024-08-18T12:05:05Z",
+    "name": "Hanwha Life Esports",
+    "slug": "hanwha-life-esports"
+  },
+  "end_at": "2024-09-08T11:24:36Z",
+  "draw": false
+}
