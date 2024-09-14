@@ -65,7 +65,8 @@ impl<'de> Deserialize<'de> for Winner {
     where
         D: Deserializer<'de>,
     {
-        deserializer.deserialize_map(WinnerVisitor)
+        const FIELDS: &[&str] = &["winner", "winner_id", "winner_type"];
+        deserializer.deserialize_struct("Winner", FIELDS, WinnerVisitor)
     }
 }
 
