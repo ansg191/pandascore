@@ -20,7 +20,6 @@ fn test_deserialize_match() {
     assert_eq!(m.match_type, MatchType::BestOf);
     assert_eq!(m.number_of_games, 5);
     assert_eq!(m.status, MatchStatus::Finished);
-    eprintln!("{:#?}", m);
     assert!(matches!(m.winner, Some(Winner::Team { .. })))
 }
 
