@@ -7,7 +7,7 @@ use crate::{
     endpoint::{
         sealed::Sealed, CollectionOptions, EndpointError, ListResponse, PaginatedEndpoint, BASE_URL,
     },
-    model::{league::League, Identifier},
+    model::{league::League, matches::Match, series::Series, tournament::Tournament, Identifier},
 };
 
 crate::endpoint::list_endpoint!(ListPlayers("/players") => crate::model::player::Player);
@@ -54,7 +54,7 @@ pub struct ListPlayerSeries<'a> {
 }
 
 impl Sealed for ListPlayerSeries<'_> {
-    type Response = ListResponse<League>;
+    type Response = ListResponse<Series>;
 
     fn to_request(self) -> Result<Request, EndpointError> {
         let mut url = Url::parse(&format!("{}/players/{}/series", BASE_URL, self.id))?;
@@ -70,7 +70,7 @@ impl Sealed for ListPlayerSeries<'_> {
 }
 
 impl PaginatedEndpoint for ListPlayerSeries<'_> {
-    type Item = League;
+    type Item = Series;
 
     fn with_options(self, options: CollectionOptions) -> Self {
         Self { options, ..self }
@@ -86,7 +86,7 @@ pub struct ListPlayerTournaments<'a> {
 }
 
 impl Sealed for ListPlayerTournaments<'_> {
-    type Response = ListResponse<League>;
+    type Response = ListResponse<Tournament>;
 
     fn to_request(self) -> Result<Request, EndpointError> {
         let mut url = Url::parse(&format!("{}/players/{}/tournaments", BASE_URL, self.id))?;
@@ -102,7 +102,7 @@ impl Sealed for ListPlayerTournaments<'_> {
 }
 
 impl PaginatedEndpoint for ListPlayerTournaments<'_> {
-    type Item = League;
+    type Item = Tournament;
 
     fn with_options(self, options: CollectionOptions) -> Self {
         Self { options, ..self }
@@ -118,7 +118,7 @@ pub struct ListPlayerMatches<'a> {
 }
 
 impl Sealed for ListPlayerMatches<'_> {
-    type Response = ListResponse<League>;
+    type Response = ListResponse<Match>;
 
     fn to_request(self) -> Result<Request, EndpointError> {
         let mut url = Url::parse(&format!("{}/players/{}/matches", BASE_URL, self.id))?;
@@ -134,7 +134,7 @@ impl Sealed for ListPlayerMatches<'_> {
 }
 
 impl PaginatedEndpoint for ListPlayerMatches<'_> {
-    type Item = League;
+    type Item = Match;
 
     fn with_options(self, options: CollectionOptions) -> Self {
         Self { options, ..self }
