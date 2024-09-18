@@ -9,7 +9,7 @@ use crate::{
     },
 };
 
-crate::endpoint::list_endpoint!(ListMatches("/matches") => Match);
+crate::endpoint::multi_list_endpoint!(ListMatches("/matches") => Match);
 crate::endpoint::get_endpoint!(GetMatch("/matches") => Match);
 
 #[derive(Debug, Copy, Clone, Eq, PartialEq)]
