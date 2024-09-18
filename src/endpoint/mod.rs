@@ -40,6 +40,13 @@ pub trait Endpoint: sealed::Sealed {}
 
 impl<T: sealed::Sealed> Endpoint for T {}
 
+pub trait PaginatedEndpoint: Endpoint {
+    type Item;
+
+    #[must_use]
+    fn with_options(self, options: CollectionOptions) -> Self;
+}
+
 async fn deserialize<T: DeserializeOwned>(response: reqwest::Response) -> Result<T, EndpointError> {
     let body = response.bytes().await?;
     let mut jd = serde_json::Deserializer::from_slice(body.as_ref());
@@ -459,6 +466,14 @@ macro_rules! list_endpoint {
                 $crate::endpoint::ListResponse::from_response(response)
             }
         }
+
+        impl $crate::endpoint::PaginatedEndpoint for $name {
+            type Item = $response;
+
+            fn with_options(self, options: $crate::endpoint::CollectionOptions) -> Self {
+                Self(options)
+            }
+        }
     };
 }
 pub(crate) use list_endpoint;
@@ -495,6 +510,14 @@ macro_rules! multi_list_endpoint {
                 Output = ::std::result::Result<Self::Response, $crate::endpoint::EndpointError>,
             > + Send {
                 $crate::endpoint::ListResponse::from_response(response)
+            }
+        }
+
+        impl $crate::endpoint::PaginatedEndpoint for $name {
+            type Item = $response;
+
+            fn with_options(self, options: $crate::endpoint::CollectionOptions) -> Self {
+                Self { options, ..self }
             }
         }
     };

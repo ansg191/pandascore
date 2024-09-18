@@ -4,7 +4,9 @@ use reqwest::{Request, Response};
 use url::Url;
 
 use crate::{
-    endpoint::{sealed::Sealed, CollectionOptions, EndpointError, ListResponse, BASE_URL},
+    endpoint::{
+        sealed::Sealed, CollectionOptions, EndpointError, ListResponse, PaginatedEndpoint, BASE_URL,
+    },
     model::{
         bracket::{TournamentBracket, TournamentBracketMatch},
         matches::Match,
@@ -69,6 +71,14 @@ impl Sealed for ListTournamentMatches<'_> {
     }
 }
 
+impl PaginatedEndpoint for ListTournamentMatches<'_> {
+    type Item = Match;
+
+    fn with_options(self, options: CollectionOptions) -> Self {
+        Self { options, ..self }
+    }
+}
+
 #[derive(Debug, Clone, PartialEq, Eq, bon::Builder)]
 pub struct ListTournamentTeams<'a> {
     #[builder(into)]
@@ -90,6 +100,14 @@ impl Sealed for ListTournamentTeams<'_> {
         response: Response,
     ) -> impl Future<Output = Result<Self::Response, EndpointError>> + Send {
         ListResponse::from_response(response)
+    }
+}
+
+impl PaginatedEndpoint for ListTournamentTeams<'_> {
+    type Item = Team;
+
+    fn with_options(self, options: CollectionOptions) -> Self {
+        Self { options, ..self }
     }
 }
 
@@ -137,5 +155,13 @@ impl Sealed for GetTournamentStandings<'_> {
 
     async fn from_response(response: Response) -> Result<Self::Response, EndpointError> {
         ListResponse::from_response(response).await
+    }
+}
+
+impl PaginatedEndpoint for GetTournamentStandings<'_> {
+    type Item = TournamentStanding;
+
+    fn with_options(self, options: CollectionOptions) -> Self {
+        Self { options, ..self }
     }
 }
