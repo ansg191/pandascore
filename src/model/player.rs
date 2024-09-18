@@ -24,7 +24,7 @@ pub struct CompactPlayer {
     pub active: bool,
     /// Age of the player, null if unknown. When `birthday` is null, age is an approxiamation.
     /// Note: this field is only present for users running the Historical plan or up.
-    pub age: Option<u8>,
+    pub age: Option<u32>,
     /// Birthday of the player.
     /// Note: this field is only present for users running the Historical plan or up.
     #[serde(with = "birthday_format", default)]
