@@ -10,6 +10,7 @@ use crate::model::{
 };
 
 #[derive(Debug, Clone, Eq, PartialEq, Hash, Deserialize)]
+#[non_exhaustive]
 pub struct Match {
     #[serde(flatten)]
     inner: CompactMatch,
@@ -31,12 +32,14 @@ pub struct Match {
 
 #[derive(Debug, Copy, Clone, Eq, PartialEq, Hash, Deserialize)]
 #[serde(untagged)]
+#[non_exhaustive]
 pub enum MatchResult {
     Team { score: u32, team_id: u64 },
     Player { score: u32, player_id: u64 },
 }
 
 #[derive(Debug, Clone, Eq, PartialEq, Hash, Deserialize)]
+#[non_exhaustive]
 pub struct MatchVideoGameVersion {
     /// Whether this videogame version is current
     pub current: bool,
@@ -44,6 +47,7 @@ pub struct MatchVideoGameVersion {
 }
 
 #[derive(Debug, Clone, Eq, PartialEq, Hash, Deserialize)]
+#[non_exhaustive]
 pub struct CompactMatch {
     #[serde(with = "time::serde::iso8601::option")]
     pub begin_at: Option<OffsetDateTime>,
@@ -81,6 +85,7 @@ pub struct CompactMatch {
 
 #[derive(Debug, Copy, Clone, Eq, PartialEq, Hash, Deserialize)]
 #[serde(rename_all = "snake_case")]
+#[non_exhaustive]
 pub enum MatchType {
     AllGamesPlayed,
     BestOf,
@@ -92,6 +97,7 @@ pub enum MatchType {
 
 #[derive(Debug, Copy, Clone, Eq, PartialEq, Hash, Deserialize)]
 #[serde(rename_all = "snake_case")]
+#[non_exhaustive]
 pub enum MatchStatus {
     Canceled,
     Finished,
@@ -101,6 +107,7 @@ pub enum MatchStatus {
 }
 
 #[derive(Debug, Clone, Eq, PartialEq, Hash, Deserialize)]
+#[non_exhaustive]
 pub struct MatchLive {
     #[serde(with = "time::serde::iso8601::option")]
     pub opens_at: Option<OffsetDateTime>,
@@ -111,6 +118,7 @@ pub struct MatchLive {
 
 #[derive(Debug, Clone, Eq, PartialEq, Hash, Deserialize)]
 #[serde(tag = "type", content = "opponent")]
+#[non_exhaustive]
 pub enum CompactMatchOpponent {
     Team(CompactTeam),
     Player(CompactPlayer),
@@ -118,6 +126,7 @@ pub enum CompactMatchOpponent {
 
 #[derive(Debug, Clone, Eq, PartialEq, Hash, Deserialize)]
 #[serde(tag = "opponent_type", content = "opponents")]
+#[non_exhaustive]
 pub enum MatchOpponents {
     Team(Vec<CompactTeam>),
     Player(Vec<CompactPlayer>),

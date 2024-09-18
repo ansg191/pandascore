@@ -19,6 +19,7 @@ mod winner;
 pub use winner::Winner;
 
 #[derive(Debug, Clone, Eq, PartialEq, Hash, Deserialize)]
+#[non_exhaustive]
 pub struct VideoGame {
     pub id: u64,
     pub name: CompactString,
@@ -28,6 +29,7 @@ pub struct VideoGame {
 
 /// A unique identifier for an entity.
 #[derive(Debug, Copy, Clone, Eq, PartialEq, Hash, Deserialize)]
+#[non_exhaustive]
 pub enum Identifier<'a> {
     Id(u64),
     Slug(&'a str),
@@ -54,6 +56,7 @@ impl Display for Identifier<'_> {
 }
 
 #[derive(Debug, Copy, Clone, Eq, PartialEq, Hash)]
+#[non_exhaustive]
 pub enum EventStatus {
     Past,
     Running,

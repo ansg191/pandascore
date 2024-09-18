@@ -7,6 +7,7 @@ use time::OffsetDateTime;
 use crate::model::{player::CompactPlayer, VideoGame};
 
 #[derive(Debug, Clone, Eq, PartialEq, Hash, Deserialize)]
+#[non_exhaustive]
 pub struct Team {
     #[serde(flatten)]
     pub inner: CompactTeam,
@@ -17,6 +18,7 @@ pub struct Team {
 }
 
 #[derive(Debug, Clone, Eq, PartialEq, Hash, Deserialize)]
+#[non_exhaustive]
 pub struct CompactTeam {
     pub acronym: Option<CompactString>,
     /// The ID of the team.

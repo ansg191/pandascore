@@ -41,6 +41,7 @@ use crate::model::{player::CompactPlayer, team::CompactTeam};
 /// The `Winner` object is a Rust enum that can represent all of these cases
 /// and attempts to deserialize the various representations into a single enum.
 #[derive(Debug, Clone, Eq, PartialEq, Hash)]
+#[non_exhaustive]
 pub enum Winner {
     Team {
         /// The team ID that won the event.
@@ -78,6 +79,7 @@ enum WinnerFields {
     WinnerType,
 }
 
+#[non_exhaustive]
 struct WinnerVisitor;
 
 impl<'de> Visitor<'de> for WinnerVisitor {
@@ -171,6 +173,7 @@ where
     }
 }
 
+#[non_exhaustive]
 #[derive(Debug, Deserialize)]
 struct WinnerInternal {
     id: u64,
