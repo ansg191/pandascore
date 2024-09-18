@@ -1,6 +1,6 @@
 use common::{Expectation, MockClient};
 use pandascore::{
-    endpoint::all::r#match::GetMatch,
+    endpoint::all::matches::GetMatch,
     model::{
         matches::{Match, MatchStatus, MatchType},
         Identifier, Winner,
