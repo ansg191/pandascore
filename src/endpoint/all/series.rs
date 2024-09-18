@@ -2,7 +2,9 @@ use reqwest::{Request, Response};
 use url::Url;
 
 use crate::{
-    endpoint::{sealed::Sealed, CollectionOptions, EndpointError, ListResponse, BASE_URL},
+    endpoint::{
+        sealed::Sealed, CollectionOptions, EndpointError, ListResponse, PaginatedEndpoint, BASE_URL,
+    },
     model::{matches::Match, series::Series, tournament::Tournament, EventStatus, Identifier},
 };
 
@@ -54,5 +56,13 @@ impl Sealed for ListSeriesTournaments<'_> {
 
     async fn from_response(response: Response) -> Result<Self::Response, EndpointError> {
         ListResponse::from_response(response).await
+    }
+}
+
+impl PaginatedEndpoint for ListSeriesTournaments<'_> {
+    type Item = Tournament;
+
+    fn with_options(self, options: CollectionOptions) -> Self {
+        Self { options, ..self }
     }
 }
