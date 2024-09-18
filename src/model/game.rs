@@ -4,6 +4,7 @@ use time::OffsetDateTime;
 use crate::model::Winner;
 
 #[derive(Debug, Clone, Eq, PartialEq, Hash, Deserialize)]
+#[non_exhaustive]
 pub struct CompactGame {
     /// The game begin time, UTC.
     /// `None` when the game status is [`GameStatus::NotStarted`].
@@ -40,6 +41,7 @@ pub struct CompactGame {
 
 #[derive(Debug, Copy, Clone, Eq, PartialEq, Hash, Deserialize)]
 #[serde(rename_all = "snake_case")]
+#[non_exhaustive]
 pub enum GameStatus {
     Finished,
     NotPlayed,

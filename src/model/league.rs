@@ -7,6 +7,7 @@ use time::OffsetDateTime;
 use crate::model::{series::CompactSeries, VideoGame};
 
 #[derive(Debug, Clone, Eq, PartialEq, Hash, Deserialize)]
+#[non_exhaustive]
 pub struct League {
     #[serde(flatten)]
     inner: CompactLeague,
@@ -17,6 +18,7 @@ pub struct League {
 }
 
 #[derive(Debug, Clone, Eq, PartialEq, Hash, Deserialize)]
+#[non_exhaustive]
 pub struct CompactLeague {
     pub id: u64,
     pub image_url: Option<String>,

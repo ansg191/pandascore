@@ -7,6 +7,7 @@ use time::OffsetDateTime;
 use crate::model::{league::CompactLeague, tournament::CompactTournament, VideoGame, Winner};
 
 #[derive(Debug, Clone, Eq, PartialEq, Hash, Deserialize)]
+#[non_exhaustive]
 pub struct Series {
     #[serde(flatten)]
     inner: CompactSeries,
@@ -18,6 +19,7 @@ pub struct Series {
 }
 
 #[derive(Debug, Clone, Eq, PartialEq, Hash, Deserialize)]
+#[non_exhaustive]
 pub struct CompactSeries {
     #[serde(with = "time::serde::iso8601::option")]
     pub begin_at: Option<OffsetDateTime>,

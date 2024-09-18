@@ -7,6 +7,7 @@ use time::{Date, OffsetDateTime};
 use crate::model::{team::CompactTeam, VideoGame};
 
 #[derive(Debug, Clone, Eq, PartialEq, Hash, Deserialize)]
+#[non_exhaustive]
 pub struct Player {
     #[serde(flatten)]
     pub inner: CompactPlayer,
@@ -17,6 +18,7 @@ pub struct Player {
 }
 
 #[derive(Debug, Clone, Eq, PartialEq, Hash, Deserialize)]
+#[non_exhaustive]
 pub struct CompactPlayer {
     /// Whether player is active.
     pub active: bool,

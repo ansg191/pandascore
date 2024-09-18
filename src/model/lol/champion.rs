@@ -1,6 +1,7 @@
 use compact_str::CompactString;
 use serde::Deserialize;
 #[derive(Debug, Clone, PartialEq, Deserialize)]
+#[non_exhaustive]
 pub struct Champion {
     pub armor: f64,
     #[serde(rename = "armorperlevel")]

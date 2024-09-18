@@ -14,6 +14,7 @@ use crate::model::{
 };
 
 #[derive(Debug, Clone, Eq, PartialEq, Hash, Deserialize)]
+#[non_exhaustive]
 pub struct Tournament {
     #[serde(flatten)]
     inner: CompactTournament,
@@ -29,12 +30,14 @@ pub struct Tournament {
 }
 
 #[derive(Debug, Clone, Eq, PartialEq, Hash, Deserialize)]
+#[non_exhaustive]
 pub struct Roster {
     pub players: Vec<CompactPlayer>,
     pub team: CompactTeam,
 }
 
 #[derive(Debug, Clone, Eq, PartialEq, Hash, Deserialize)]
+#[non_exhaustive]
 pub struct CompactTournament {
     #[serde(with = "time::serde::iso8601::option")]
     pub begin_at: Option<OffsetDateTime>,
@@ -102,6 +105,7 @@ impl From<Tournament> for CompactTournament {
 
 #[derive(Debug, Clone, Eq, PartialEq, Hash, Deserialize)]
 #[serde(tag = "type", content = "rosters")]
+#[non_exhaustive]
 pub enum TournamentRosters {
     Team(Vec<Team>),
     Player(Vec<Player>),
@@ -109,12 +113,14 @@ pub enum TournamentRosters {
 #[derive(Debug, Clone, Eq, PartialEq, Hash, Deserialize)]
 #[serde(untagged)]
 #[allow(clippy::large_enum_variant)]
+#[non_exhaustive]
 pub enum TournamentStanding {
     Bracket(BracketStanding),
     Group(GroupStanding),
 }
 
 #[derive(Debug, Clone, Eq, PartialEq, Hash, Deserialize)]
+#[non_exhaustive]
 pub struct BracketStanding {
     pub last_match: CompactMatch,
     pub rank: u64,
@@ -122,6 +128,7 @@ pub struct BracketStanding {
 }
 
 #[derive(Debug, Clone, Eq, PartialEq, Hash, Deserialize)]
+#[non_exhaustive]
 pub struct GroupStanding {
     pub losses: u64,
     pub rank: u64,

@@ -5,6 +5,7 @@ use serde::Deserialize;
 use crate::model::matches::{CompactMatch, CompactMatchOpponent, MatchResult};
 
 #[derive(Debug, Clone, Eq, PartialEq, Hash, Deserialize)]
+#[non_exhaustive]
 pub struct TournamentBracketMatch {
     #[serde(flatten)]
     pub inner: CompactMatch,
