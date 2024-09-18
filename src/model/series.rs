@@ -10,7 +10,7 @@ use crate::model::{league::CompactLeague, tournament::CompactTournament, VideoGa
 #[non_exhaustive]
 pub struct Series {
     #[serde(flatten)]
-    inner: CompactSeries,
+    pub inner: CompactSeries,
 
     pub league: CompactLeague,
     pub tournaments: Vec<CompactTournament>,

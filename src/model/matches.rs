@@ -13,7 +13,7 @@ use crate::model::{
 #[non_exhaustive]
 pub struct Match {
     #[serde(flatten)]
-    inner: CompactMatch,
+    pub inner: CompactMatch,
 
     // pub games: Vec<_>
     pub league: CompactLeague,

@@ -17,7 +17,7 @@ use crate::model::{
 #[non_exhaustive]
 pub struct Tournament {
     #[serde(flatten)]
-    inner: CompactTournament,
+    pub inner: CompactTournament,
 
     #[serde(default)]
     pub expected_roster: Vec<Roster>,

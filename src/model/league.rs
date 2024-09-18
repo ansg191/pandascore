@@ -10,7 +10,7 @@ use crate::model::{series::CompactSeries, VideoGame};
 #[non_exhaustive]
 pub struct League {
     #[serde(flatten)]
-    inner: CompactLeague,
+    pub inner: CompactLeague,
 
     pub series: Vec<CompactSeries>,
     #[serde(rename = "videogame")]
