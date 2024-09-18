@@ -6,6 +6,17 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [0.5.3](https://github.com/ansg191/pandascore/compare/v0.5.2...v0.5.3) - 2024-09-18
+
+### Fixed
+
+- same bug in 1225fbf except for players
+- increase player age bitsize to `u32`
+
+### Other
+
+- Merge pull request [#40](https://github.com/ansg191/pandascore/pull/40) from ansg191/player-age-bug
+
 ## [0.5.2](https://github.com/ansg191/pandascore/compare/v0.5.1...v0.5.2) - 2024-09-18
 
 ### Fixed
