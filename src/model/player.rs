@@ -4,14 +4,14 @@ use compact_str::CompactString;
 use serde::Deserialize;
 use time::{Date, OffsetDateTime};
 
-use crate::model::VideoGame;
+use crate::model::{team::CompactTeam, VideoGame};
 
 #[derive(Debug, Clone, Eq, PartialEq, Hash, Deserialize)]
 pub struct Player {
     #[serde(flatten)]
     pub inner: CompactPlayer,
 
-    // pub current_team: todo
+    pub current_team: Option<CompactTeam>,
     #[serde(rename = "current_videogame")]
     pub current_video_game: Option<VideoGame>,
 }
