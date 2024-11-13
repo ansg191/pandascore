@@ -3,7 +3,8 @@ allow = [
     "MIT",
     "Apache-2.0",
     "BSD-3-Clause",
-    "Unicode-DFS-2016"
+    "Unicode-DFS-2016",
+    "Unicode-3.0"
 ]
 
 [bans]
@@ -12,7 +13,6 @@ wildcards = "deny"
 
 skip = [
     { crate = "sync_wrapper@0.1.2", reason = "pending tower PR #788" },
-    { crate = "tower@0.4.13", reason = "pending hyper-util PR #144" },
     { crate = "windows-sys", reason = "this crate is never up to date" },
 ]
 
