@@ -10,7 +10,7 @@ edition = "2021"
 rust-version = "1.75.0"
 
 [dependencies]
-bon = "2.2.0"
+bon = "3.0.0"
 compact_str = { version = "0.8.0", features = ["serde"] }
 linkify = "0.10.0"
 petgraph = "0.6.5"
