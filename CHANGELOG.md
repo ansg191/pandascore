@@ -6,6 +6,13 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [0.5.4](https://github.com/ansg191/pandascore/compare/v0.5.3...v0.5.4) - 2024-11-14
+
+### Other
+
+- *(deps)* update bon requirement from 2.2.0 to 3.0.0
+- *(cargo-deny)* fix cargo-deny licenses
+
 ## [0.5.3](https://github.com/ansg191/pandascore/compare/v0.5.2...v0.5.3) - 2024-09-18
 
 ### Fixed
