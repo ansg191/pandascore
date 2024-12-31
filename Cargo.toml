@@ -13,7 +13,7 @@ rust-version = "1.75.0"
 bon = "3.0.0"
 compact_str = { version = "0.8.0", features = ["serde"] }
 linkify = "0.10.0"
-petgraph = "0.6.5"
+petgraph = "0.7.0"
 regex = "1.10.6"
 reqwest = { version = "0.12.7", default-features = false }
 serde = { version = "1", features = ["derive"] }
