@@ -11,7 +11,7 @@ rust-version = "1.75.0"
 
 [dependencies]
 bon = "3.0.0"
-compact_str = { version = "0.8.0", features = ["serde"] }
+compact_str = { version = "0.9.0", features = ["serde"] }
 linkify = "0.10.0"
 petgraph = "0.6.5"
 regex = "1.10.6"
